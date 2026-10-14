@@ -1,0 +1,5 @@
+Chromium 155.0.8059.39 built on Debian GNU/Linux 12 (bookworm)
+v22.23.3
+lab-browser@ /opt/lab-browser
+`-- playwright@1.58.2
+

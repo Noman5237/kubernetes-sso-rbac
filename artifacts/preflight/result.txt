@@ -1,0 +1,11 @@
+/usr/local/bin/docker
+/Users/mdabdullahal.noman/.go/bin/kind
+/opt/homebrew/bin/helm
+/opt/homebrew/bin/kubectl
+kind v0.33.0 go1.27.1 darwin/arm64
+v4.3.0+gbec5b06
+Client Version: v1.37.0
+Kustomize Version: v5.8.1
+Server=29.7.2 OS=linux Arch=aarch64 CPUs=12 MemoryBytes=8319238144
+Docker Compose version v5.5.1
+PASS: local chart rendering; no Kubernetes resources applied.

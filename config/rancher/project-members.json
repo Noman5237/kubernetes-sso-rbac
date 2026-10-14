@@ -1,0 +1,16 @@
+[
+  {
+    "cluster": "cluster-a",
+    "project": "demo",
+    "namespace": "demo",
+    "user": "alice",
+    "role": "lab-developer"
+  },
+  {
+    "cluster": "cluster-b",
+    "project": "demo",
+    "namespace": "demo",
+    "user": "alice",
+    "role": "lab-namespace-admin"
+  }
+]

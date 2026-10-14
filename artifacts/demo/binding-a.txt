@@ -1,0 +1,1 @@
+In cluster A, open Cluster and Project Members, then Project Membership. Alice has the lab developer role in the demo project. The row says Local for this direct binding, but Alice authenticates through Keycloak. This binding supplies the scope. The reusable role name does not need a cluster name.

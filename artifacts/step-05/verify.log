@@ -1,0 +1,8 @@
+PASS: Rancher HTTPS ping through hostname and explicit CA
+PASS: dashboard HTML reachable
+PASS: Rancher publishes the correct agent CA
+PASS: one available replica, strict agent TLS, correct server URL
+PASS: default Fleet controllers and Rancher webhook are available
+PASS: Rancher container resolves and trusts Keycloak using its CA store
+PASS: all three kind nodes resolve and trust Rancher
+PASS: default host trust rejects lab CA; no host trust installed

@@ -1,0 +1,1 @@
+These are real cube control commands captured for this demo, using Alice's Rancher kubeconfig. In A, listing pods succeeds. Creating deployments and reading secrets are denied. System namespace pods and cluster nodes are also denied.

@@ -1,0 +1,3 @@
+PASS: Alice global role is user-base only
+PASS: cluster-a direct user binding, demo-only project, no promoted role binding
+PASS: cluster-b direct user binding, demo-only project, no promoted role binding

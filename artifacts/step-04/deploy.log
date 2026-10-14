@@ -1,0 +1,210 @@
+ Image postgres:17.6-alpine@sha256:ef257d85f76e48da1c64832459b59fcaba1a4dac97bf5d7450c77753542eee94 Pulling 
+ 863529d0da69 Pulling fs layer 0B
+ 216c47815005 Pulling fs layer 0B
+ c89215c5eedd Pulling fs layer 0B
+ 8a019f30ea14 Pulling fs layer 0B
+ 405d8144726e Pulling fs layer 0B
+ bbb8a248653b Pulling fs layer 0B
+ 6b59a28fa201 Pulling fs layer 0B
+ 38e7eb8bb034 Pulling fs layer 0B
+ d1977f5fc01c Pulling fs layer 0B
+ 00b0e19d2268 Pulling fs layer 0B
+ 216c47815005 Download complete 0B
+ 8a019f30ea14 Downloading 4.194MB
+ 8a019f30ea14 Downloading 11.53MB
+ 8a019f30ea14 Downloading 17.83MB
+ 8a019f30ea14 Downloading 22.02MB
+ 8a019f30ea14 Downloading 24.12MB
+ 8a019f30ea14 Downloading 30.41MB
+ 863529d0da69 Download complete 0B
+ 8a019f30ea14 Downloading 33.55MB
+ c89215c5eedd Download complete 0B
+ 8a019f30ea14 Downloading 36.7MB
+ 8a019f30ea14 Downloading 40.89MB
+ 8a019f30ea14 Downloading 45.09MB
+ 8a019f30ea14 Downloading 48.23MB
+ 8a019f30ea14 Downloading 51.38MB
+ 405d8144726e Download complete 0B
+ 8a019f30ea14 Downloading 54.53MB
+ 38e7eb8bb034 Download complete 0B
+ 8a019f30ea14 Downloading 58.72MB
+ 8a019f30ea14 Downloading 61.87MB
+ 8a019f30ea14 Downloading 65.01MB
+ bbb8a248653b Download complete 0B
+ 8a019f30ea14 Downloading 68.16MB
+ 8a019f30ea14 Downloading 71.3MB
+ 8a019f30ea14 Downloading 75.5MB
+ 6b59a28fa201 Downloading 1.049MB
+ 8a019f30ea14 Downloading 78.64MB
+ 6b59a28fa201 Downloading 1.049MB
+ 8a019f30ea14 Downloading 81.79MB
+ 00b0e19d2268 Download complete 0B
+ 6b59a28fa201 Downloading 1.049MB
+ 8a019f30ea14 Downloading 84.93MB
+ 6b59a28fa201 Downloading 2.097MB
+ 8a019f30ea14 Downloading 88.08MB
+ 8a019f30ea14 Downloading 92.27MB
+ 6b59a28fa201 Downloading 2.097MB
+ 8a019f30ea14 Downloading 95.42MB
+ 6b59a28fa201 Downloading 2.097MB
+ 6b59a28fa201 Downloading 3.146MB
+ 8a019f30ea14 Downloading 98.57MB
+ 6b59a28fa201 Downloading 3.146MB
+ 8a019f30ea14 Downloading 101.5MB
+ d1977f5fc01c Download complete 0B
+ 6b59a28fa201 Download complete 0B
+ 8a019f30ea14 Download complete 0B
+ 6b59a28fa201 Extracting 1B
+ 6b59a28fa201 Extracting 1B
+ 6b59a28fa201 Extracting 1B
+ 6b59a28fa201 Extracting 1B
+ 6b59a28fa201 Extracting 1B
+ 6b59a28fa201 Extracting 1B
+ 6b59a28fa201 Extracting 1B
+ 6b59a28fa201 Extracting 1B
+ 6b59a28fa201 Extracting 1B
+ 6b59a28fa201 Extracting 1B
+ 6b59a28fa201 Extracting 2B
+ 6b59a28fa201 Extracting 2B
+ 6b59a28fa201 Extracting 2B
+ 6b59a28fa201 Extracting 2B
+ 6b59a28fa201 Extracting 2B
+ 6b59a28fa201 Extracting 2B
+ 6b59a28fa201 Extracting 2B
+ 6b59a28fa201 Extracting 2B
+ 6b59a28fa201 Extracting 2B
+ 6b59a28fa201 Extracting 2B
+ 216c47815005 Pull complete 0B
+ 38e7eb8bb034 Pull complete 0B
+ bbb8a248653b Pull complete 0B
+ 6b59a28fa201 Pull complete 0B
+ 8a019f30ea14 Extracting 1B
+ 8a019f30ea14 Extracting 1B
+ cda1840be011 Download complete 0B
+ 8a019f30ea14 Extracting 1B
+ 92f258fa98a9 Download complete 0B
+ 8a019f30ea14 Extracting 1B
+ 8a019f30ea14 Extracting 1B
+ 8a019f30ea14 Extracting 1B
+ 8a019f30ea14 Extracting 1B
+ 8a019f30ea14 Extracting 1B
+ 8a019f30ea14 Extracting 1B
+ 863529d0da69 Pull complete 0B
+ c89215c5eedd Pull complete 0B
+ 405d8144726e Pull complete 0B
+ 00b0e19d2268 Pull complete 0B
+ d1977f5fc01c Pull complete 0B
+ 8a019f30ea14 Pull complete 0B
+ Image postgres:17.6-alpine@sha256:ef257d85f76e48da1c64832459b59fcaba1a4dac97bf5d7450c77753542eee94 Pulled 
+ Image sso-lab-keycloak:26.8.0 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 620B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 293B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for quay.io/keycloak/keycloak:26.8.0@sha256:27b3230fbabb8c9ff3c66c864cf09dcd8a41aca82e5100679d109ef0eeb05741
+#3 DONE 2.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/2] FROM quay.io/keycloak/keycloak:26.8.0@sha256:27b3230fbabb8c9ff3c66c864cf09dcd8a41aca82e5100679d109ef0eeb05741
+#5 resolve quay.io/keycloak/keycloak:26.8.0@sha256:27b3230fbabb8c9ff3c66c864cf09dcd8a41aca82e5100679d109ef0eeb05741 done
+#5 sha256:4a2e28445a303e036a03dcebc1da9323caff477b66e168b15331fae595adfcbb 0B / 550B 0.2s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 0B / 173.77MB 0.2s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 0B / 86.08MB 0.2s
+#5 sha256:292194316df73e14fc3c6ddb083347942c09e070b0667497377c046e55135b1a 0B / 6.66MB 0.2s
+#5 sha256:4a2e28445a303e036a03dcebc1da9323caff477b66e168b15331fae595adfcbb 550B / 550B 0.4s done
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 6.29MB / 86.08MB 1.2s
+#5 sha256:292194316df73e14fc3c6ddb083347942c09e070b0667497377c046e55135b1a 1.05MB / 6.66MB 1.4s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 11.53MB / 86.08MB 1.5s
+#5 sha256:292194316df73e14fc3c6ddb083347942c09e070b0667497377c046e55135b1a 2.10MB / 6.66MB 1.5s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 9.44MB / 173.77MB 1.8s
+#5 sha256:292194316df73e14fc3c6ddb083347942c09e070b0667497377c046e55135b1a 3.15MB / 6.66MB 1.7s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 16.78MB / 86.08MB 1.8s
+#5 sha256:292194316df73e14fc3c6ddb083347942c09e070b0667497377c046e55135b1a 4.19MB / 6.66MB 2.0s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 25.17MB / 86.08MB 2.1s
+#5 sha256:292194316df73e14fc3c6ddb083347942c09e070b0667497377c046e55135b1a 5.24MB / 6.66MB 2.1s
+#5 sha256:292194316df73e14fc3c6ddb083347942c09e070b0667497377c046e55135b1a 6.66MB / 6.66MB 2.3s done
+#5 extracting sha256:292194316df73e14fc3c6ddb083347942c09e070b0667497377c046e55135b1a
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 32.51MB / 86.08MB 2.4s
+#5 extracting sha256:292194316df73e14fc3c6ddb083347942c09e070b0667497377c046e55135b1a 0.2s done
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 19.92MB / 173.77MB 2.7s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 38.80MB / 86.08MB 2.7s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 44.04MB / 86.08MB 3.0s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 29.36MB / 173.77MB 3.3s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 49.28MB / 86.08MB 3.3s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 38.80MB / 173.77MB 3.8s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 55.57MB / 86.08MB 3.6s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 48.23MB / 173.77MB 4.2s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 61.87MB / 86.08MB 4.1s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 69.21MB / 86.08MB 4.5s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 57.67MB / 173.77MB 4.8s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 74.45MB / 86.08MB 4.8s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 80.74MB / 86.08MB 5.1s
+#5 sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 86.08MB / 86.08MB 5.4s done
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 75.50MB / 173.77MB 5.6s
+#5 extracting sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 85.98MB / 173.77MB 5.9s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 96.47MB / 173.77MB 6.2s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 106.95MB / 173.77MB 6.5s
+#5 extracting sha256:28b516cd8348e0239e9fe4afc4f0184fdedd1fa84f65f3ef7fa4045e023d6364 1.0s done
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 117.44MB / 173.77MB 6.8s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 128.97MB / 173.77MB 7.1s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 140.51MB / 173.77MB 7.4s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 152.04MB / 173.77MB 7.7s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 167.77MB / 173.77MB 8.1s
+#5 sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 173.77MB / 173.77MB 8.3s done
+#5 extracting sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958
+#5 extracting sha256:a003058f8c409de42945ead339eba6894659aaf5c92f87599526153d1f7ca958 0.6s done
+#5 DONE 8.9s
+
+#5 [1/2] FROM quay.io/keycloak/keycloak:26.8.0@sha256:27b3230fbabb8c9ff3c66c864cf09dcd8a41aca82e5100679d109ef0eeb05741
+#5 extracting sha256:4a2e28445a303e036a03dcebc1da9323caff477b66e168b15331fae595adfcbb done
+#5 DONE 8.9s
+
+#6 [2/2] RUN /opt/keycloak/bin/kc.sh build
+#6 0.514 Updating the configuration and installing your custom providers, if any. Please wait.
+#6 2.100 2026-10-13 18:35:42,896 WARN  [org.keycloak.common.Profile] (build-5) Deprecated features identity-brokering-api:v1, twitter-broker:v1 enabled by default. Check the upgrading guide for steps to use later versions if available.
+#6 4.154 2026-10-13 18:35:44,950 INFO  [io.quarkus.deployment.QuarkusAugmentor] (main) Quarkus augmentation completed in 3270ms
+#6 4.164 Server configuration updated and persisted. Run the following command to review the configuration:
+#6 4.164 
+#6 4.164 	kc.sh show-config
+#6 4.164 
+#6 DONE 4.5s
+
+#7 exporting to image
+#7 exporting layers 0.1s done
+#7 exporting manifest sha256:f034c141fac310525c07b6c44f6deccb513e1e6eefcea18a7e24d17a27e56811 done
+#7 exporting config sha256:839dbac702b725a6ab27e21ac88a1da809cafa74848f317de6510120a8034306 done
+#7 exporting attestation manifest sha256:a7ef4f1a86ddf38d88d60827b8e9ae80acb494f8fc16aa1bf38886b7be552ce2 done
+#7 exporting manifest list sha256:b9a86c989d8ac1cf7741d7cc12817cf5fb98c395da9b83ccc68a5ca361301ee5 done
+#7 naming to docker.io/library/sso-lab-keycloak:26.8.0 done
+#7 unpacking to docker.io/library/sso-lab-keycloak:26.8.0 0.0s done
+#7 DONE 0.2s
+
+#8 resolving provenance for metadata file
+#8 DONE 0.0s
+ Image sso-lab-keycloak:26.8.0 Built 
+ Network kubernetes-sso-lab_database Creating 
+ Network kubernetes-sso-lab_database Creating 
+ Volume kubernetes-sso-lab_postgres-data Creating 
+ Volume kubernetes-sso-lab_postgres-data Creating 
+ Volume kubernetes-sso-lab_postgres-data Created 
+ Volume kubernetes-sso-lab_postgres-data Created 
+ Network kubernetes-sso-lab_database Created 
+ Network kubernetes-sso-lab_database Created 
+ Container sso-lab-postgres Creating 
+ Container sso-lab-postgres Created 
+ Container sso-lab-keycloak Creating 
+ Container sso-lab-keycloak Created 
+ Container sso-lab-postgres Starting 
+ Container sso-lab-postgres Started 
+ Container sso-lab-postgres Waiting 
+ Container sso-lab-postgres Healthy 
+ Container sso-lab-keycloak Starting 
+ Container sso-lab-keycloak Started 

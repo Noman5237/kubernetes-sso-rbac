@@ -1,0 +1,101 @@
+[
+  {
+    "id": "intro",
+    "title": "One identity. Different permissions.",
+    "badge": "Overview",
+    "narration": "Three tiny Kubernetes clusters. The management cluster runs Rancher. Keycloak knows who Alice is. Rancher decides what Alice can do in each application cluster. We will check the real dashboard and real cube control results.",
+    "audioDuration": 14.133515,
+    "duration": 15.733514999999999,
+    "raw": "/demo/raw/ecd1cfef2c20bfe5225077db9725d797.webm"
+  },
+  {
+    "id": "identity",
+    "title": "Keycloak says: this is Alice.",
+    "badge": "Keycloak · administrator view",
+    "narration": "Here is Alice in Keycloak. Keycloak handles her login. There are no lab groups. We keep all cluster permission assignments in Rancher. These administrator screens show the configuration; they are not screens Alice can administer.",
+    "audioDuration": 13.925488,
+    "duration": 15.525488,
+    "raw": "/demo/raw/6f1d9d9783411dcbe65a7933e22da59b.webm"
+  },
+  {
+    "id": "roles",
+    "title": "Reusable role: read pods + deployments.",
+    "badge": "Rancher · administrator view",
+    "narration": "Here is the reusable lab developer role template. It grants get, list, and watch for pods and deployments. There is no cluster assignment inside this template. The project member binding chooses where these permissions apply.",
+    "audioDuration": 13.885261,
+    "duration": 15.485261,
+    "raw": "/demo/raw/72f3b943cb955c1f54a3782a4b12f4a7.webm"
+  },
+  {
+    "id": "binding-a",
+    "title": "Alice → lab-developer → A / demo",
+    "badge": "Rancher · administrator view",
+    "narration": "In cluster A, open Cluster and Project Members, then Project Membership. Alice has the lab developer role in the demo project. The row says Local for this direct binding, but Alice authenticates through Keycloak. This binding supplies the scope. The reusable role name does not need a cluster name.",
+    "audioDuration": 18.37932,
+    "duration": 19.97932,
+    "raw": "/demo/raw/189b8414edc0eddf37764dac196f42d9.webm"
+  },
+  {
+    "id": "binding-b",
+    "title": "Same Alice → namespace admin → B / demo",
+    "badge": "Rancher · administrator view",
+    "narration": "In cluster B, the same Alice has lab namespace admin in demo. This is namespace administration, not cluster administration. The role uses an explicit resource list. Keycloak has no cluster role mapping to maintain.",
+    "audioDuration": 14.213787,
+    "duration": 15.813787,
+    "raw": "/demo/raw/7048c93f58bfeaa152fe3f544986a266.webm"
+  },
+  {
+    "id": "home",
+    "title": "Alice sees two app clusters.",
+    "badge": "Rancher · Alice view",
+    "narration": "Now we are signed in as Alice through Keycloak. Rancher shows both application clusters. The management cluster is absent. Same identity, different permissions, controlled by Rancher project assignments.",
+    "audioDuration": 13.133741,
+    "duration": 14.733741,
+    "raw": "/demo/raw/c0c16e4d1777995ef0a7392b2895d925.webm"
+  },
+  {
+    "id": "dashboard-a",
+    "title": "Cluster A: read only. No Create action.",
+    "badge": "Rancher · Alice view",
+    "narration": "In cluster A, Alice can view deployments. The list is empty because we deployed no applications. There is no Create action. Empty means the read succeeded; it does not mean access was denied.",
+    "audioDuration": 12.182041,
+    "duration": 13.782041,
+    "raw": "/demo/raw/e65a9f4facde80931b7280f6efd4e0d4.webm"
+  },
+  {
+    "id": "dashboard-b",
+    "title": "Cluster B: Create is available.",
+    "badge": "Rancher · Alice view",
+    "narration": "In cluster B, the Create action is available. Alice has the broader demo namespace role here. We do not deploy anything. Next, the command line checks whether the API agrees with the dashboard.",
+    "audioDuration": 12.298141,
+    "duration": 13.898140999999999,
+    "raw": "/demo/raw/bd5803c565d518f2b0d1a41fc540c4ee.webm"
+  },
+  {
+    "id": "terminal-a",
+    "title": "Actual kubectl results · Cluster A",
+    "badge": "Terminal output playback",
+    "narration": "These are real cube control commands captured for this demo, using Alice's Rancher kubeconfig. In A, listing pods succeeds. Creating deployments and reading secrets are denied. System namespace pods and cluster nodes are also denied.",
+    "audioDuration": 15.125351,
+    "duration": 16.725351,
+    "raw": "/demo/raw/670d6c7b902ee5cc953035abfc2cf814.webm"
+  },
+  {
+    "id": "terminal-b",
+    "title": "Actual kubectl results · Cluster B",
+    "badge": "Terminal output playback",
+    "narration": "In B, listing pods succeeds. Creating deployments and reading secrets are allowed in demo. System namespace pods and cluster nodes remain denied. Permission checks do not create workloads. The dashboard and command line agree.",
+    "audioDuration": 14.666576,
+    "duration": 16.266576,
+    "raw": "/demo/raw/bcd972d4e230788318f2c7f73e2cf5fe.webm"
+  },
+  {
+    "id": "outro",
+    "title": "Keycloak = identity. Rancher = permissions.",
+    "badge": "Result",
+    "narration": "Keycloak says, this is Alice. Rancher assigns her project roles. Kubernetes enforces the resulting permissions. The current kubeconfig tokens last one hour and can be revoked. This demo leaves the roles unchanged. Lifecycle and outage tests are still a separate next step.",
+    "audioDuration": 17.976735,
+    "duration": 19.576735000000003,
+    "raw": "/demo/raw/a21c2877d0d969a1969d80a2c0275976.webm"
+  }
+]

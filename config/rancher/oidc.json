@@ -1,0 +1,11 @@
+{
+ "type":"keyCloakOIDCConfig", "name":"keycloakoidc", "enabled":true,
+ "accessMode":"restricted", "clientId":"rancher",
+ "issuer":"https://sso.lab.test:8443/realms/kubernetes",
+ "authEndpoint":"https://sso.lab.test:8443/realms/kubernetes/protocol/openid-connect/auth",
+ "rancherUrl":"https://rancher.lab.test:8443/verify-auth",
+ "rancherApiHost":"https://rancher.lab.test:8443",
+ "scope":"openid profile email", "pkceMethod":"S256",
+ "groupsClaim":"groups", "groupSearchEnabled":false,
+ "logoutAllEnabled":false,"logoutAllForced":false
+}

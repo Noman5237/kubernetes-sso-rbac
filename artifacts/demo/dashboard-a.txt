@@ -1,0 +1,1 @@
+In cluster A, Alice can view deployments. The list is empty because we deployed no applications. There is no Create action. Empty means the read succeeded; it does not mean access was denied.

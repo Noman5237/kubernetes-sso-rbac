@@ -1,0 +1,123 @@
+[
+  {
+    "kind": "ClusterRole",
+    "name": "proxy-clusterrole-kubeapiserver",
+    "rules": [
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "nodes/metrics",
+          "nodes/proxy",
+          "nodes/stats",
+          "nodes/log",
+          "nodes/spec"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch",
+          "create"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "ClusterRoleBinding",
+    "name": "proxy-role-binding-kubernetes-master",
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "proxy-clusterrole-kubeapiserver"
+    },
+    "subjects": [
+      {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "User",
+        "name": "kube-apiserver"
+      }
+    ]
+  },
+  {
+    "kind": "Namespace",
+    "name": "cattle-system"
+  },
+  {
+    "kind": "ServiceAccount",
+    "name": "cattle"
+  },
+  {
+    "kind": "ClusterRoleBinding",
+    "name": "cattle-admin-binding",
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "cattle-admin"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "cattle",
+        "namespace": "cattle-system"
+      }
+    ]
+  },
+  {
+    "kind": "Secret",
+    "name": "cattle-credentials-19009e807b"
+  },
+  {
+    "kind": "ClusterRole",
+    "name": "cattle-admin",
+    "rules": [
+      {
+        "apiGroups": [
+          "*"
+        ],
+        "resources": [
+          "*"
+        ],
+        "verbs": [
+          "*"
+        ]
+      },
+      {
+        "nonResourceURLs": [
+          "*"
+        ],
+        "verbs": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "Deployment",
+    "name": "cattle-cluster-agent",
+    "serviceAccountName": "cattle",
+    "hostNetwork": false,
+    "containers": [
+      {
+        "name": "cluster-register",
+        "image": "rancher/rancher-agent:v2.15.2",
+        "securityContext": {},
+        "trustEnv": {
+          "CATTLE_SERVER": "https://rancher.lab.test:8443",
+          "CATTLE_CA_CHECKSUM": "55633843610d81e4ab8afe699208f63ab96651265ac861bc4e0795dd68041c59",
+          "STRICT_VERIFY": "true"
+        }
+      }
+    ],
+    "volumes": [
+      {
+        "name": "cattle-credentials",
+        "type": "secret"
+      }
+    ]
+  },
+  {
+    "kind": "Service",
+    "name": "cattle-cluster-agent"
+  }
+]

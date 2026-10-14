@@ -1,0 +1,1 @@
+Here is Alice in Keycloak. Keycloak handles her login. There are no lab groups. We keep all cluster permission assignments in Rancher. These administrator screens show the configuration; they are not screens Alice can administer.

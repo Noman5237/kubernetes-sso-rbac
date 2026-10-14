@@ -1,0 +1,1 @@
+In cluster B, the Create action is available. Alice has the broader demo namespace role here. We do not deploy anything. Next, the command line checks whether the API agrees with the dashboard.

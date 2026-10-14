@@ -1,0 +1,121 @@
+Skip to main content
+Home
+CRA
+
+cluster-a
+
+Local kind auth POC: application cluster A
+
+CRB
+
+cluster-b
+
+Local kind auth POC: application cluster B
+
+GLOBAL APPS
+Cluster Management
+Virtualization Management
+CONFIGURATION
+Users & Authentication
+Global Settings
+v2.15.2
+cluster-a
+Only User Namespaces
+Cluster
+Projects/Namespaces
+Workloads
+Storage
+Cluster Dashboard
+Local kind auth POC: application cluster A
+Provider: Imported
+Kubernetes Version: v1.36.4
+Architecture: arm64
+Created: 9 hours ago
+1
+Total Resources
+0
+Deployments
+Capacity
+Pods
+Used 12 / 110
+10.91%
+CPU
+Reserved 0.95 / 12 cores
+7.92%
+Memory
+Reserved 0.28 / 15.6 GiB
+1.79%
+Used 0 / 15.6 GiB
+0.00%
+Etcd
+Scheduler
+Controller Manager
+Certificates
+Full secrets list
+State
+	
+Name
+	
+Namespace
+	
+Domain Name
+	
+Expires In
+	
+Expires On
+	
+Lifetime
+	
+Age
+	
+There are no rows to show.
+Links: [
+  {
+    text: 'Skip to main content',
+    href: '/dashboard/c/c-xncbh/explorer#main-content'
+  },
+  { text: 'Home', href: '/dashboard/home' },
+  {
+    text: 'Cluster Management',
+    href: '/dashboard/c/_/manager/provisioning.cattle.io.cluster'
+  },
+  {
+    text: 'Virtualization Management',
+    href: '/dashboard/c/_/harvesterManager/harvesterhci.io.management.cluster'
+  },
+  { text: 'Users & Authentication', href: '/dashboard/c/c-xncbh/auth' },
+  { text: 'Global Settings', href: '/dashboard/c/c-xncbh/settings' },
+  { text: 'v2.15.2', href: '/dashboard/about' },
+  { text: 'Cluster', href: '/dashboard/c/c-xncbh/explorer' },
+  {
+    text: 'Projects/Namespaces',
+    href: '/dashboard/c/c-xncbh/explorer/projectsnamespaces'
+  },
+  {
+    text: 'Workloads',
+    href: '/dashboard/c/c-xncbh/explorer/workload-dashboard'
+  },
+  {
+    text: 'Full secrets list',
+    href: '/dashboard/c/c-xncbh/explorer/secret'
+  }
+]
+Buttons: [
+  '',
+  'cra    cluster-a Local kind auth POC: application cluster A ',
+  'crb    cluster-b Local kind auth POC: application cluster B ',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '    ',
+  '     ',
+  '    ',
+  'Cluster',
+  '',
+  'Workloads',
+  '',
+  'Storage',
+  ''
+]

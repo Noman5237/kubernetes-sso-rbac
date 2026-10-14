@@ -1,0 +1,5 @@
+apiVersion: management.cattle.io/v3
+kind: Setting
+metadata:
+  name: server-url
+value: https://rancher.lab.test:8443

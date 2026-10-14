@@ -1,0 +1,2 @@
+PASS: no Keycloak groups, user memberships, or group claim mappers
+PASS: user-only admission, reusable roles, exactly one direct Alice binding per demo project; legacy roles/bindings gone

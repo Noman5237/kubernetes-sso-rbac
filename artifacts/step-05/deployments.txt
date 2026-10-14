@@ -1,0 +1,11 @@
+NAMESPACE                   NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
+cattle-capi-system          capi-controller-manager              1/1     1            1           8s
+cattle-fleet-local-system   fleet-agent                          1/1     1            1           25s
+cattle-fleet-system         fleet-controller                     1/1     1            1           110s
+cattle-fleet-system         gitjob                               1/1     1            1           110s
+cattle-fleet-system         helmops                              1/1     1            1           110s
+cattle-system               rancher                              1/1     1            1           3m14s
+cattle-system               rancher-webhook                      1/1     1            1           55s
+cattle-turtles-system       rancher-turtles-controller-manager   1/1     1            1           39s
+kube-system                 coredns                              2/2     2            2           32m
+local-path-storage          local-path-provisioner               1/1     1            1           32m

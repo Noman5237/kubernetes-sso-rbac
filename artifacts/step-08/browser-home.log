@@ -1,0 +1,115 @@
+Skip to main content
+Home
+CRA
+
+cluster-a
+
+Local kind auth POC: application cluster A
+
+CRB
+
+cluster-b
+
+Local kind auth POC: application cluster B
+
+GLOBAL APPS
+Cluster Management
+Virtualization Management
+CONFIGURATION
+Users & Authentication
+Global Settings
+v2.15.2
+Welcome to Rancher
+Clusters
+2
+Manage
+State
+	
+Name
+	
+Provider
+Distro
+	
+Kubernetes Version
+Architecture
+	
+CPU
+	
+Memory
+	
+Pods
+
+
+Active
+	
+
+cluster-a
+
+Local kind auth POC: application cluster A
+
+	
+Imported
+	
+v1.36.4
+arm64
+	12 cores	16 GiB	
+
+12/110
+
+
+
+Active
+	
+
+cluster-b
+
+Local kind auth POC: application cluster B
+
+	
+Imported
+	
+v1.36.4
+arm64
+	12 cores	16 GiB	
+
+12/110
+
+Links
+Docs
+Forums
+Slack
+File an Issue
+Get Started
+Rancher Prime
+Links: [
+  {
+    text: 'Skip to main content',
+    href: '/dashboard/home#main-content'
+  },
+  { text: 'Home', href: '/dashboard/home' },
+  {
+    text: 'Cluster Management',
+    href: '/dashboard/c/_/manager/provisioning.cattle.io.cluster'
+  },
+  {
+    text: 'Virtualization Management',
+    href: '/dashboard/c/_/harvesterManager/harvesterhci.io.management.cluster'
+  },
+  { text: 'Users & Authentication', href: '/dashboard/c/c-xncbh/auth' },
+  { text: 'Global Settings', href: '/dashboard/c/c-xncbh/settings' },
+  { text: 'v2.15.2', href: '/dashboard/about' },
+  {
+    text: 'Manage',
+    href: '/dashboard/c/_/manager/provisioning.cattle.io.cluster'
+  },
+  { text: 'cluster-a', href: '/dashboard/c/c-xncbh/explorer' },
+  { text: 'cluster-b', href: '/dashboard/c/c-cs8x9/explorer' }
+]
+Buttons: [
+  '',
+  'cra    cluster-a Local kind auth POC: application cluster A ',
+  'crb    cluster-b Local kind auth POC: application cluster B ',
+  '    ',
+  '     ',
+  '    '
+]

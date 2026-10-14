@@ -1,0 +1,1 @@
+Now we are signed in as Alice through Keycloak. Rancher shows both application clusters. The management cluster is absent. Same identity, different permissions, controlled by Rancher project assignments.

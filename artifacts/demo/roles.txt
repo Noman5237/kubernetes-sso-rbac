@@ -1,0 +1,1 @@
+Here is the reusable lab developer role template. It grants get, list, and watch for pods and deployments. There is no cluster assignment inside this template. The project member binding chooses where these permissions apply.

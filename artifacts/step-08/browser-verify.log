@@ -1,0 +1,21 @@
+Checking browser login: alice
+Login page ready: alice
+OIDC redirect started: alice
+Keycloak form submitted: alice
+Browser login result: alice allowed
+PASS: cluster-a rendered deployment permissions and browser-session API boundaries
+PASS: cluster-b rendered deployment permissions and browser-session API boundaries
+PASS: management cluster absent and API access denied
+Checking browser login: no-role
+Login page ready: no-role
+OIDC redirect started: no-role
+Keycloak form submitted: no-role
+No-role page: Howdy!
+
+Welcome to Rancher
+Invalid username or password. Please try again.
+Log in with OIDC
+Use a local user
+English
+Browser login result: no-role denied
+PASS: no-role real browser OIDC login denied by Rancher

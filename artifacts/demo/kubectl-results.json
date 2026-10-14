@@ -1,0 +1,59 @@
+{
+  "capturedAt": "2026-10-14T06:46:50.021210+00:00",
+  "checks": {
+    "cluster-a": [
+      {
+        "command": "kubectl --kubeconfig kubeconfigs/alice-cluster-a.yaml get pods -n demo",
+        "output": "No resources found in demo namespace.",
+        "exitCode": 0
+      },
+      {
+        "command": "kubectl --kubeconfig kubeconfigs/alice-cluster-a.yaml auth can-i create deployments -n demo",
+        "output": "no",
+        "exitCode": 1
+      },
+      {
+        "command": "kubectl --kubeconfig kubeconfigs/alice-cluster-a.yaml auth can-i get secrets -n demo",
+        "output": "no",
+        "exitCode": 1
+      },
+      {
+        "command": "kubectl --kubeconfig kubeconfigs/alice-cluster-a.yaml auth can-i get pods -n kube-system",
+        "output": "no",
+        "exitCode": 1
+      },
+      {
+        "command": "kubectl --kubeconfig kubeconfigs/alice-cluster-a.yaml auth can-i get nodes",
+        "output": "no\nWarning: resource 'nodes' is not namespace scoped",
+        "exitCode": 1
+      }
+    ],
+    "cluster-b": [
+      {
+        "command": "kubectl --kubeconfig kubeconfigs/alice-cluster-b.yaml get pods -n demo",
+        "output": "No resources found in demo namespace.",
+        "exitCode": 0
+      },
+      {
+        "command": "kubectl --kubeconfig kubeconfigs/alice-cluster-b.yaml auth can-i create deployments -n demo",
+        "output": "yes",
+        "exitCode": 0
+      },
+      {
+        "command": "kubectl --kubeconfig kubeconfigs/alice-cluster-b.yaml auth can-i get secrets -n demo",
+        "output": "yes",
+        "exitCode": 0
+      },
+      {
+        "command": "kubectl --kubeconfig kubeconfigs/alice-cluster-b.yaml auth can-i get pods -n kube-system",
+        "output": "no",
+        "exitCode": 1
+      },
+      {
+        "command": "kubectl --kubeconfig kubeconfigs/alice-cluster-b.yaml auth can-i get nodes",
+        "output": "no\nWarning: resource 'nodes' is not namespace scoped",
+        "exitCode": 1
+      }
+    ]
+  }
+}

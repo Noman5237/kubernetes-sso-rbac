@@ -1,0 +1,8 @@
+{
+  "users": {
+    "alice": "ba4eba94-5fb4-4524-be94-3319e29d2402",
+    "no-role": "740d60d6-521a-4247-9d68-a85b109cb192",
+    "rancher-admin": "7f7f41e1-3df7-4569-8b01-4fd3597ddb09"
+  },
+  "clientId": "714b275c-f318-4aa6-9564-7b3d9c9b3fcf"
+}

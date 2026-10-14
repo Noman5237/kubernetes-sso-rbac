@@ -1,0 +1,7 @@
+PASS: HTTPS discovery, issuer, token endpoint
+PASS: discovery from mngmt
+PASS: discovery from cluster-a
+PASS: discovery from cluster-b
+PASS: Keycloak readiness UP (private management endpoint)
+PASS: PostgreSQL sees encrypted Keycloak sessions
+PASS: Keycloak database user is not superuser

@@ -1,0 +1,5 @@
+PASS: actual Alice OIDC+PKCE login; management cluster not visible
+PASS: cluster-a permission matrix and real allowed/forbidden reads
+PASS: cluster-b permission matrix and real allowed/forbidden reads
+PASS: no-role authenticates at Keycloak but Rancher denies site access
+PASS: local Rancher administrator recovery login preserved

@@ -1,0 +1,22 @@
+{
+  "aliceLogin": true,
+  "tlsVerification": true,
+  "clusters": [
+    {
+      "cluster": "cluster-a",
+      "createActionVisible": false,
+      "demo": 200,
+      "outside": 403,
+      "secrets": 403
+    },
+    {
+      "cluster": "cluster-b",
+      "createActionVisible": true,
+      "demo": 200,
+      "outside": 403,
+      "secrets": 200
+    }
+  ],
+  "managementStatus": 403,
+  "noRoleDenied": true
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "namespace": "cattle-fleet-system",
+    "name": "fleet-agent",
+    "available": 1,
+    "images": [
+      "rancher/fleet-agent:v0.16.2"
+    ]
+  },
+  {
+    "namespace": "cattle-system",
+    "name": "cattle-cluster-agent",
+    "available": 1,
+    "images": [
+      "rancher/rancher-agent:v2.15.2"
+    ]
+  },
+  {
+    "namespace": "cattle-system",
+    "name": "rancher-webhook",
+    "available": 1,
+    "images": [
+      "rancher/rancher-webhook:v0.11.3"
+    ]
+  },
+  {
+    "namespace": "kube-system",
+    "name": "coredns",
+    "available": 2,
+    "images": [
+      "registry.k8s.io/coredns/coredns:v1.14.2"
+    ]
+  },
+  {
+    "namespace": "local-path-storage",
+    "name": "local-path-provisioner",
+    "available": 1,
+    "images": [
+      "docker.io/kindest/local-path-provisioner:v20260820-69b56db7"
+    ]
+  }
+]

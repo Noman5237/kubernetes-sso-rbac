@@ -1,0 +1,28 @@
+Recording intro
+Recorded intro 16s
+Recording identity
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByRole('link', { name: 'alice', exact: true }) to be visible
+
+Recording identity
+Recorded identity 16s
+Recording roles
+Recorded roles 15s
+Recording binding-a
+Recorded binding-a 20s
+Recording binding-b
+Recorded binding-b 16s
+Recording home
+Recorded home 15s
+Recording dashboard-a
+Recorded dashboard-a 14s
+Recording dashboard-b
+Recorded dashboard-b 14s
+Recording terminal-a
+Recorded terminal-a 17s
+Recording terminal-b
+Recorded terminal-b 16s
+Recording outro
+Recorded outro 20s
+PASS: real UI checks, Keycloak OIDC login, and all demo scenes recorded

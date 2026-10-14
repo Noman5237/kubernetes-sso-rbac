@@ -1,0 +1,24 @@
+[
+  {
+    "cluster": "cluster-a",
+    "clusterId": "c-xncbh",
+    "projectId": "c-xncbh:p-gt9n6",
+    "namespace": "demo",
+    "user": "alice",
+    "userId": "u-mcplx3f5xw",
+    "userPrincipalId": "keycloakoidc_user://ba4eba94-5fb4-4524-be94-3319e29d2402",
+    "role": "lab-developer",
+    "roleTemplateId": "rt-g8ssj"
+  },
+  {
+    "cluster": "cluster-b",
+    "clusterId": "c-cs8x9",
+    "projectId": "c-cs8x9:p-mclsj",
+    "namespace": "demo",
+    "user": "alice",
+    "userId": "u-mcplx3f5xw",
+    "userPrincipalId": "keycloakoidc_user://ba4eba94-5fb4-4524-be94-3319e29d2402",
+    "role": "lab-namespace-admin",
+    "roleTemplateId": "rt-dq8ns"
+  }
+]

@@ -1,0 +1,19 @@
+name: kubernetes-sso-demo
+services:
+  browser:
+    image: sso-lab-browser:1.58.2
+    container_name: sso-lab-demo
+    shm_size: 1gb
+    command: ["sh", "/config/start.sh"]
+    volumes:
+      - ./config/browser:/config:ro
+      - ./scripts:/scripts:ro
+      - ./artifacts/demo:/demo
+      - ./secrets/ca/ca.crt:/lab-ca/ca.crt:ro
+      - ./secrets/keycloak/alice-password:/run/alice-password:ro
+      - ./secrets/keycloak/recovery-password:/run/recovery-password:ro
+      - ./secrets/rancher/admin-password:/run/rancher-admin-password:ro
+    networks: [kind]
+networks:
+  kind:
+    external: true

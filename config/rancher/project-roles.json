@@ -1,0 +1,203 @@
+[
+  {
+    "name": "lab-developer",
+    "context": "project",
+    "description": "Read pods and deployments in the assigned demo project",
+    "rules": [
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "pods"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "apps"
+        ],
+        "resources": [
+          "deployments"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      }
+    ],
+    "clusterCreatorDefault": false,
+    "projectCreatorDefault": false,
+    "administrative": false,
+    "external": false
+  },
+  {
+    "name": "lab-namespace-admin",
+    "context": "project",
+    "description": "Administer explicitly listed native namespaced resources in demo; no wildcard resources or cluster grants",
+    "rules": [
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "pods",
+          "pods/attach",
+          "pods/exec",
+          "pods/log",
+          "pods/portforward",
+          "pods/eviction",
+          "pods/status",
+          "pods/ephemeralcontainers",
+          "services",
+          "services/proxy",
+          "endpoints",
+          "configmaps",
+          "secrets",
+          "persistentvolumeclaims",
+          "persistentvolumeclaims/status",
+          "serviceaccounts",
+          "serviceaccounts/token",
+          "replicationcontrollers",
+          "replicationcontrollers/scale",
+          "replicationcontrollers/status",
+          "resourcequotas",
+          "resourcequotas/status",
+          "limitranges",
+          "events",
+          "podtemplates"
+        ],
+        "verbs": [
+          "*"
+        ]
+      },
+      {
+        "apiGroups": [
+          "apps"
+        ],
+        "resources": [
+          "deployments",
+          "deployments/scale",
+          "deployments/status",
+          "replicasets",
+          "replicasets/scale",
+          "replicasets/status",
+          "statefulsets",
+          "statefulsets/scale",
+          "statefulsets/status",
+          "daemonsets",
+          "daemonsets/status",
+          "controllerrevisions"
+        ],
+        "verbs": [
+          "*"
+        ]
+      },
+      {
+        "apiGroups": [
+          "batch"
+        ],
+        "resources": [
+          "jobs",
+          "jobs/status",
+          "cronjobs",
+          "cronjobs/status"
+        ],
+        "verbs": [
+          "*"
+        ]
+      },
+      {
+        "apiGroups": [
+          "autoscaling"
+        ],
+        "resources": [
+          "horizontalpodautoscalers",
+          "horizontalpodautoscalers/status"
+        ],
+        "verbs": [
+          "*"
+        ]
+      },
+      {
+        "apiGroups": [
+          "networking.k8s.io"
+        ],
+        "resources": [
+          "ingresses",
+          "ingresses/status",
+          "networkpolicies"
+        ],
+        "verbs": [
+          "*"
+        ]
+      },
+      {
+        "apiGroups": [
+          "policy"
+        ],
+        "resources": [
+          "poddisruptionbudgets",
+          "poddisruptionbudgets/status"
+        ],
+        "verbs": [
+          "*"
+        ]
+      },
+      {
+        "apiGroups": [
+          "rbac.authorization.k8s.io"
+        ],
+        "resources": [
+          "roles",
+          "rolebindings"
+        ],
+        "verbs": [
+          "*"
+        ]
+      },
+      {
+        "apiGroups": [
+          "coordination.k8s.io"
+        ],
+        "resources": [
+          "leases"
+        ],
+        "verbs": [
+          "*"
+        ]
+      },
+      {
+        "apiGroups": [
+          "discovery.k8s.io"
+        ],
+        "resources": [
+          "endpointslices"
+        ],
+        "verbs": [
+          "*"
+        ]
+      },
+      {
+        "apiGroups": [
+          "events.k8s.io"
+        ],
+        "resources": [
+          "events"
+        ],
+        "verbs": [
+          "*"
+        ]
+      }
+    ],
+    "clusterCreatorDefault": false,
+    "projectCreatorDefault": false,
+    "administrative": false,
+    "external": false
+  }
+]

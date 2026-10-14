@@ -1,0 +1,19 @@
+ Container sso-lab-keycloak Stopping 
+ Container sso-lab-keycloak Stopped 
+ Container sso-lab-postgres Restarting 
+ Container sso-lab-postgres Started 
+ Container sso-lab-postgres Running 
+ Container sso-lab-keycloak Recreate 
+ Container sso-lab-keycloak Recreated 
+ Container sso-lab-postgres Waiting 
+ Container sso-lab-postgres Healthy 
+ Container sso-lab-keycloak Starting 
+ Container sso-lab-keycloak Started 
+PASS: HTTPS discovery, issuer, token endpoint
+PASS: discovery from mngmt
+PASS: discovery from cluster-a
+PASS: discovery from cluster-b
+PASS: Keycloak readiness UP (private management endpoint)
+PASS: PostgreSQL sees encrypted Keycloak sessions
+PASS: Keycloak database user is not superuser
+PASS: master realm and bootstrap administrator retained after database restart and Keycloak container recreation.

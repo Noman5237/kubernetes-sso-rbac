@@ -1,0 +1,137 @@
+Skip to main content
+Home
+CRA
+
+cluster-a
+
+Local kind auth POC: application cluster A
+
+CRB
+
+cluster-b
+
+Local kind auth POC: application cluster B
+
+GLOBAL APPS
+Cluster Management
+Virtualization Management
+CONFIGURATION
+Users & Authentication
+Global Settings
+v2.15.2
+cluster-b
+Only User Namespaces
+Cluster
+Workloads
+CronJobs
+0
+DaemonSets
+0
+Deployments
+0
+Jobs
+0
+StatefulSets
+0
+Pods
+0
+Service Discovery
+Storage
+Policy
+More Resources
+Deployments 
+Create
+	
+State
+	
+Name
+	
+Namespace
+	
+Image
+	
+Ready
+	
+Up To Date
+	
+Available
+	
+Age
+	
+Health
+	
+There are no rows to show.
+Links: [
+  {
+    text: 'Skip to main content',
+    href: '/dashboard/c/c-cs8x9/explorer/apps.deployment#main-content'
+  },
+  { text: 'Home', href: '/dashboard/home' },
+  {
+    text: 'Cluster Management',
+    href: '/dashboard/c/_/manager/provisioning.cattle.io.cluster'
+  },
+  {
+    text: 'Virtualization Management',
+    href: '/dashboard/c/_/harvesterManager/harvesterhci.io.management.cluster'
+  },
+  { text: 'Users & Authentication', href: '/dashboard/c/c-cs8x9/auth' },
+  { text: 'Global Settings', href: '/dashboard/c/c-cs8x9/settings' },
+  { text: 'v2.15.2', href: '/dashboard/about' },
+  { text: 'Cluster', href: '/dashboard/c/c-cs8x9/explorer' },
+  {
+    text: 'Workloads',
+    href: '/dashboard/c/c-cs8x9/explorer/workload-dashboard'
+  },
+  {
+    text: 'CronJobs\n0',
+    href: '/dashboard/c/c-cs8x9/explorer/batch.cronjob'
+  },
+  {
+    text: 'DaemonSets\n0',
+    href: '/dashboard/c/c-cs8x9/explorer/apps.daemonset'
+  },
+  {
+    text: 'Deployments\n0',
+    href: '/dashboard/c/c-cs8x9/explorer/apps.deployment'
+  },
+  { text: 'Jobs\n0', href: '/dashboard/c/c-cs8x9/explorer/batch.job' },
+  {
+    text: 'StatefulSets\n0',
+    href: '/dashboard/c/c-cs8x9/explorer/apps.statefulset'
+  },
+  { text: 'Pods\n0', href: '/dashboard/c/c-cs8x9/explorer/pod' },
+  {
+    text: 'Create',
+    href: '/dashboard/c/c-cs8x9/explorer/apps.deployment/create'
+  }
+]
+Buttons: [
+  '',
+  'cra    cluster-a Local kind auth POC: application cluster A ',
+  'crb    cluster-b Local kind auth POC: application cluster B ',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '    ',
+  '     ',
+  '    ',
+  'Cluster',
+  '',
+  'Workloads',
+  '',
+  'Service Discovery',
+  '',
+  'Storage',
+  '',
+  'Policy',
+  '',
+  'More Resources',
+  '',
+  '',
+  ' ',
+  ' '
+]

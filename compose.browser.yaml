@@ -1,0 +1,19 @@
+name: kubernetes-sso-browser
+services:
+  browser:
+    build: ./config/browser
+    image: sso-lab-browser:1.58.2
+    container_name: sso-lab-browser
+    shm_size: 1gb
+    command: ["sh", "/config/start.sh"]
+    volumes:
+      - ./config/browser:/config:ro
+      - ./scripts:/scripts:ro
+      - ./artifacts/step-08:/artifacts
+      - ./secrets/ca/ca.crt:/lab-ca/ca.crt:ro
+      - ./secrets/keycloak/alice-password:/run/alice-password:ro
+      - ./secrets/keycloak/no-role-password:/run/no-role-password:ro
+    networks: [kind]
+networks:
+  kind:
+    external: true

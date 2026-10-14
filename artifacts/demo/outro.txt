@@ -1,0 +1,1 @@
+Keycloak says, this is Alice. Rancher assigns her project roles. Kubernetes enforces the resulting permissions. The current kubeconfig tokens last one hour and can be revoked. This demo leaves the roles unchanged. Lifecycle and outage tests are still a separate next step.

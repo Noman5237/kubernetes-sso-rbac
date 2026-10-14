@@ -1,0 +1,83 @@
+Skip to main content
+Home
+CRA
+
+cluster-a
+
+Local kind auth POC: application cluster A
+
+CRB
+
+cluster-b
+
+Local kind auth POC: application cluster B
+
+GLOBAL APPS
+Cluster Management
+Virtualization Management
+CONFIGURATION
+Users & Authentication
+Global Settings
+v2.15.2
+cluster-a
+Only User Namespaces
+Cluster
+Workloads
+Deployments
+0
+Pods
+0
+Storage
+No workloads to show
+Tips: Update the namespace filter above or reset the namespaces filter.
+Want to learn more about Workloads? Read our 
+Opens in a new tab
+documentation .
+Links: [
+  {
+    text: 'Skip to main content',
+    href: '/dashboard/c/c-xncbh/explorer/workload-dashboard#main-content'
+  },
+  { text: 'Home', href: '/dashboard/home' },
+  {
+    text: 'Cluster Management',
+    href: '/dashboard/c/_/manager/provisioning.cattle.io.cluster'
+  },
+  {
+    text: 'Virtualization Management',
+    href: '/dashboard/c/_/harvesterManager/harvesterhci.io.management.cluster'
+  },
+  { text: 'Users & Authentication', href: '/dashboard/c/c-xncbh/auth' },
+  { text: 'Global Settings', href: '/dashboard/c/c-xncbh/settings' },
+  { text: 'v2.15.2', href: '/dashboard/about' },
+  { text: 'Cluster', href: '/dashboard/c/c-xncbh/explorer' },
+  {
+    text: 'Workloads',
+    href: '/dashboard/c/c-xncbh/explorer/workload-dashboard'
+  },
+  {
+    text: 'Deployments\n0',
+    href: '/dashboard/c/c-xncbh/explorer/apps.deployment'
+  },
+  { text: 'Pods\n0', href: '/dashboard/c/c-xncbh/explorer/pod' }
+]
+Buttons: [
+  '',
+  'cra    cluster-a Local kind auth POC: application cluster A ',
+  'crb    cluster-b Local kind auth POC: application cluster B ',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '    ',
+  '     ',
+  '    ',
+  'Cluster',
+  '',
+  'Workloads',
+  '',
+  'Storage',
+  '',
+  'reset the namespaces filter'
+]

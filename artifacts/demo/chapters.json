@@ -1,0 +1,57 @@
+[
+  {
+    "start": 0,
+    "title": "One identity. Different permissions.",
+    "id": "intro"
+  },
+  {
+    "start": 15.734,
+    "title": "Keycloak says: this is Alice.",
+    "id": "identity"
+  },
+  {
+    "start": 31.259999999999998,
+    "title": "Reusable role: read pods + deployments.",
+    "id": "roles"
+  },
+  {
+    "start": 46.76,
+    "title": "Alice \u2192 lab-developer \u2192 A / demo",
+    "id": "binding-a"
+  },
+  {
+    "start": 66.74,
+    "title": "Same Alice \u2192 namespace admin \u2192 B / demo",
+    "id": "binding-b"
+  },
+  {
+    "start": 82.554,
+    "title": "Alice sees two app clusters.",
+    "id": "home"
+  },
+  {
+    "start": 97.288,
+    "title": "Cluster A: read only. No Create action.",
+    "id": "dashboard-a"
+  },
+  {
+    "start": 111.071,
+    "title": "Cluster B: Create is available.",
+    "id": "dashboard-b"
+  },
+  {
+    "start": 124.97,
+    "title": "Actual kubectl results \u00b7 Cluster A",
+    "id": "terminal-a"
+  },
+  {
+    "start": 141.696,
+    "title": "Actual kubectl results \u00b7 Cluster B",
+    "id": "terminal-b"
+  },
+  {
+    "start": 157.963,
+    "title": "Keycloak = identity. Rancher = permissions.",
+    "id": "outro"
+  }
+]

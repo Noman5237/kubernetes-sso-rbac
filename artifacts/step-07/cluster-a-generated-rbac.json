@@ -1,0 +1,38 @@
+{
+  "rolebindings": [
+    {
+      "namespace": "demo",
+      "name": "rb-o7paxjo5k6",
+      "roleRef": {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "ClusterRole",
+        "name": "rt-g8ssj"
+      },
+      "subjects": [
+        {
+          "apiGroup": "rbac.authorization.k8s.io",
+          "kind": "User",
+          "name": "u-mcplx3f5xw"
+        }
+      ]
+    }
+  ],
+  "clusterrolebindings": [
+    {
+      "namespace": null,
+      "name": "crb-p2xjdiwbaf",
+      "roleRef": {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "ClusterRole",
+        "name": "p-gt9n6-namespaces-readonly"
+      },
+      "subjects": [
+        {
+          "apiGroup": "rbac.authorization.k8s.io",
+          "kind": "User",
+          "name": "u-mcplx3f5xw"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+In cluster B, the same Alice has lab namespace admin in demo. This is namespace administration, not cluster administration. The role uses an explicit resource list. Keycloak has no cluster role mapping to maintain.

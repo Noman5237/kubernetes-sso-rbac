@@ -1,0 +1,83 @@
+{
+  "name": "cluster-a",
+  "id": "c-xncbh",
+  "state": "active",
+  "conditions": [
+    {
+      "status": "True",
+      "type": "CreatorMadeOwner"
+    },
+    {
+      "status": "True",
+      "type": "InitialRolesPopulated"
+    },
+    {
+      "status": "True",
+      "type": "BackingNamespaceCreated"
+    },
+    {
+      "status": "True",
+      "type": "DefaultProjectCreated"
+    },
+    {
+      "status": "True",
+      "type": "SystemProjectCreated"
+    },
+    {
+      "status": "True",
+      "type": "Pending"
+    },
+    {
+      "status": "True",
+      "type": "Provisioned"
+    },
+    {
+      "status": "True",
+      "type": "Waiting"
+    },
+    {
+      "status": "True",
+      "type": "NoDiskPressure"
+    },
+    {
+      "status": "True",
+      "type": "NoMemoryPressure"
+    },
+    {
+      "status": "True",
+      "type": "ServiceAccountSecretsMigrated"
+    },
+    {
+      "status": "True",
+      "type": "Connected"
+    },
+    {
+      "status": "True",
+      "type": "AgentTlsStrictCheck"
+    },
+    {
+      "status": "True",
+      "type": "AgentDeployed"
+    },
+    {
+      "status": "True",
+      "type": "SystemAccountCreated"
+    },
+    {
+      "status": "True",
+      "type": "Updated"
+    },
+    {
+      "status": "True",
+      "type": "GlobalAdminsSynced"
+    },
+    {
+      "status": "True",
+      "type": "Ready"
+    }
+  ],
+  "agentImage": "rancher/rancher-agent:v2.15.2",
+  "strictTLS": true,
+  "proxyReadPassed": true,
+  "nativeServiceAccountAuthPassed": true
+}

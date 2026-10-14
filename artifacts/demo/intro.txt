@@ -1,0 +1,1 @@
+Three tiny Kubernetes clusters. The management cluster runs Rancher. Keycloak knows who Alice is. Rancher decides what Alice can do in each application cluster. We will check the real dashboard and real cube control results.

@@ -1,0 +1,57 @@
+services:
+  postgres:
+    image: postgres:17.6-alpine@sha256:ef257d85f76e48da1c64832459b59fcaba1a4dac97bf5d7450c77753542eee94
+    container_name: sso-lab-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?required}
+      KEYCLOAK_DB_PASSWORD: ${KEYCLOAK_DB_PASSWORD:?required}
+    entrypoint: ["sh", "/config/start.sh"]
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./config/postgres:/config:ro
+      - ./secrets/keycloak/postgres.crt:/certs/postgres.crt:ro
+      - ./secrets/keycloak/postgres.key:/certs/postgres.key:ro
+    networks:
+      database:
+        aliases: [postgres.lab.test]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  keycloak:
+    image: sso-lab-keycloak:26.8.0
+    build: ./config/keycloak
+    container_name: sso-lab-keycloak
+    restart: unless-stopped
+    command: ["start", "--optimized"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      KC_DB_URL: jdbc:postgresql://postgres.lab.test:5432/keycloak?sslmode=verify-full&sslrootcert=/certs/ca.crt
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: ${KEYCLOAK_DB_PASSWORD:?required}
+      KC_BOOTSTRAP_ADMIN_USERNAME: lab-admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KC_BOOTSTRAP_ADMIN_PASSWORD:?required}
+      KC_HOSTNAME: https://sso.lab.test:8443
+      KC_HOSTNAME_STRICT: 'true'
+      KC_HTTP_ENABLED: 'false'
+      KC_HTTPS_CERTIFICATE_FILE: /certs/sso.crt
+      KC_HTTPS_CERTIFICATE_KEY_FILE: /certs/sso.key
+      KC_TRUSTSTORE_PATHS: /certs/ca.crt
+      KC_PROXY_HEADERS: xforwarded
+      KC_PROXY_TRUSTED_ADDRESSES: ${LAB_GATEWAY_IP:?required}
+      KC_CACHE: local
+      JAVA_OPTS_KC_HEAP: '-Xms256m -Xmx768m'
+    volumes:
+      - ./secrets/keycloak/sso.crt:/certs/sso.crt:ro
+      - ./secrets/keycloak/sso.key:/certs/sso.key:ro
+      - ./secrets/keycloak/ca.crt:/certs/ca.crt:ro
+    networks: [kind, database]
+volumes:
+  postgres-data:
+networks:
+  database:
+    internal: true

@@ -1,0 +1,8 @@
+PASS: cluster-a is Active in Rancher
+PASS: cluster-a strict-TLS agent and real admin request through Rancher proxy; demo empty
+PASS: cluster-a native admin and actual ServiceAccount authentication preserved
+cluster-b: waiting for Rancher Active
+PASS: cluster-b is Active in Rancher
+PASS: cluster-b strict-TLS agent and real admin request through Rancher proxy; demo empty
+PASS: cluster-b native admin and actual ServiceAccount authentication preserved
+PASS: setup API session logged out

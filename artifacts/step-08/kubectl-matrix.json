@@ -1,0 +1,250 @@
+[
+  {
+    "cluster": "cluster-a",
+    "verb": "get",
+    "resource": "pods",
+    "group": "",
+    "namespace": "demo",
+    "expected": true,
+    "allowed": true,
+    "kubectl": "yes"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "list",
+    "resource": "deployments",
+    "group": "apps",
+    "namespace": "demo",
+    "expected": true,
+    "allowed": true,
+    "kubectl": "yes"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "create",
+    "resource": "deployments",
+    "group": "apps",
+    "namespace": "demo",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "delete",
+    "resource": "deployments",
+    "group": "apps",
+    "namespace": "demo",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "get",
+    "resource": "secrets",
+    "group": "",
+    "namespace": "demo",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "create",
+    "resource": "rolebindings",
+    "group": "rbac.authorization.k8s.io",
+    "namespace": "demo",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "get",
+    "resource": "pods",
+    "group": "",
+    "namespace": "kube-system",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "get",
+    "resource": "nodes",
+    "group": "",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "create",
+    "resource": "clusterrolebindings",
+    "group": "rbac.authorization.k8s.io",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "create",
+    "resource": "nodes",
+    "group": "",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "create",
+    "resource": "persistentvolumes",
+    "group": "",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "create",
+    "resource": "storageclasses",
+    "group": "storage.k8s.io",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-a",
+    "verb": "create",
+    "resource": "apiservices",
+    "group": "apiregistration.k8s.io",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "get",
+    "resource": "pods",
+    "group": "",
+    "namespace": "demo",
+    "expected": true,
+    "allowed": true,
+    "kubectl": "yes"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "list",
+    "resource": "deployments",
+    "group": "apps",
+    "namespace": "demo",
+    "expected": true,
+    "allowed": true,
+    "kubectl": "yes"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "create",
+    "resource": "deployments",
+    "group": "apps",
+    "namespace": "demo",
+    "expected": true,
+    "allowed": true,
+    "kubectl": "yes"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "delete",
+    "resource": "deployments",
+    "group": "apps",
+    "namespace": "demo",
+    "expected": true,
+    "allowed": true,
+    "kubectl": "yes"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "get",
+    "resource": "secrets",
+    "group": "",
+    "namespace": "demo",
+    "expected": true,
+    "allowed": true,
+    "kubectl": "yes"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "create",
+    "resource": "rolebindings",
+    "group": "rbac.authorization.k8s.io",
+    "namespace": "demo",
+    "expected": true,
+    "allowed": true,
+    "kubectl": "yes"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "get",
+    "resource": "pods",
+    "group": "",
+    "namespace": "kube-system",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "get",
+    "resource": "nodes",
+    "group": "",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "create",
+    "resource": "clusterrolebindings",
+    "group": "rbac.authorization.k8s.io",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "create",
+    "resource": "nodes",
+    "group": "",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "create",
+    "resource": "persistentvolumes",
+    "group": "",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "create",
+    "resource": "storageclasses",
+    "group": "storage.k8s.io",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  },
+  {
+    "cluster": "cluster-b",
+    "verb": "create",
+    "resource": "apiservices",
+    "group": "apiregistration.k8s.io",
+    "expected": false,
+    "allowed": false,
+    "kubectl": "no"
+  }
+]

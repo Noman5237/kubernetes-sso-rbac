@@ -1,0 +1,10 @@
+sso TLS OK
+PASS: host rejects sso certificate without explicit CA (curl 60).
+sso TLS OK
+sso TLS OK
+sso TLS OK
+rancher TLS OK
+PASS: host rejects rancher certificate without explicit CA (curl 60).
+rancher TLS OK
+rancher TLS OK
+rancher TLS OK

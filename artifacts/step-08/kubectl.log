@@ -1,0 +1,28 @@
+PASS: cluster-a get pods demo yes
+PASS: cluster-a list deployments.apps demo yes
+PASS: cluster-a create deployments.apps demo no
+PASS: cluster-a delete deployments.apps demo no
+PASS: cluster-a get secrets demo no
+PASS: cluster-a create rolebindings.rbac.authorization.k8s.io demo no
+PASS: cluster-a get pods kube-system no
+PASS: cluster-a get nodes cluster-scope no
+PASS: cluster-a create clusterrolebindings.rbac.authorization.k8s.io cluster-scope no
+PASS: cluster-a create nodes cluster-scope no
+PASS: cluster-a create persistentvolumes cluster-scope no
+PASS: cluster-a create storageclasses.storage.k8s.io cluster-scope no
+PASS: cluster-a create apiservices.apiregistration.k8s.io cluster-scope no
+PASS: cluster-b get pods demo yes
+PASS: cluster-b list deployments.apps demo yes
+PASS: cluster-b create deployments.apps demo yes
+PASS: cluster-b delete deployments.apps demo yes
+PASS: cluster-b get secrets demo yes
+PASS: cluster-b create rolebindings.rbac.authorization.k8s.io demo yes
+PASS: cluster-b get pods kube-system no
+PASS: cluster-b get nodes cluster-scope no
+PASS: cluster-b create clusterrolebindings.rbac.authorization.k8s.io cluster-scope no
+PASS: cluster-b create nodes cluster-scope no
+PASS: cluster-b create persistentvolumes cluster-scope no
+PASS: cluster-b create storageclasses.storage.k8s.io cluster-scope no
+PASS: cluster-b create apiservices.apiregistration.k8s.io cluster-scope no
+PASS: cluster-a actual empty reads and Forbidden outside scope
+PASS: cluster-b actual empty reads and Forbidden outside scope

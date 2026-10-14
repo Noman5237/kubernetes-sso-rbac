@@ -1,0 +1,24 @@
+configmap/lab-tls-probe-ca created
+pod/lab-tls-probe created
+pod/lab-tls-probe condition met
+sso TLS OK
+rancher TLS OK
+PASS pod DNS and TLS: mngmt
+pod "lab-tls-probe" deleted from kube-system namespace
+configmap "lab-tls-probe-ca" deleted from kube-system namespace
+configmap/lab-tls-probe-ca created
+pod/lab-tls-probe created
+pod/lab-tls-probe condition met
+sso TLS OK
+rancher TLS OK
+PASS pod DNS and TLS: cluster-a
+pod "lab-tls-probe" deleted from kube-system namespace
+configmap "lab-tls-probe-ca" deleted from kube-system namespace
+configmap/lab-tls-probe-ca created
+pod/lab-tls-probe created
+pod/lab-tls-probe condition met
+sso TLS OK
+rancher TLS OK
+PASS pod DNS and TLS: cluster-b
+pod "lab-tls-probe" deleted from kube-system namespace
+configmap "lab-tls-probe-ca" deleted from kube-system namespace

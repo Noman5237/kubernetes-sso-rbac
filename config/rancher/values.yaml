@@ -1,0 +1,39 @@
+# TLS ends at the existing Docker gateway; backend stays on the kind network.
+hostname: rancher.lab.test
+replicas: 1
+tls: external
+networkExposure:
+  type: none
+ingress:
+  enabled: false
+  tls:
+    source: secret
+privateCA: true
+additionalTrustedCAs: true
+agentTLSMode: strict
+image:
+  repository: rancher/rancher
+  tag: v2.15.2@sha256:0c3d8e5702555b2bfd2ec3fe7a6e5f95484a28fcb9787c498db3e5b0f62652ea
+resources:
+  requests:
+    cpu: 500m
+    memory: 1Gi
+  limits:
+    memory: 3Gi
+startupProbe:
+  failureThreshold: 60
+extraObjects:
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: rancher-gateway
+      namespace: cattle-system
+    spec:
+      type: NodePort
+      selector:
+        app: rancher
+      ports:
+        - name: http
+          port: 80
+          targetPort: 80
+          nodePort: 30080

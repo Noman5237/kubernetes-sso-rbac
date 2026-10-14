@@ -1,0 +1,66 @@
+=== mngmt ===
+node/mngmt-control-plane condition met
+ok
+NAME                  STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION            CONTAINER-RUNTIME
+mngmt-control-plane   Ready    control-plane   9h    v1.36.4   172.18.0.2    <none>        Debian GNU/Linux 13 (trixie)   7.0.12-linuxkit (arm64)   containerd://2.3.4
+yes
+NAMESPACE                   NAME                                                  READY   STATUS      RESTARTS     AGE
+cattle-capi-system          capi-controller-manager-754dcdb8b9-8tbwp              1/1     Running     0            8h
+cattle-fleet-local-system   fleet-agent-9bb754f4c-tszb8                           1/1     Running     0            8h
+cattle-fleet-system         fleet-controller-b89cdf655-k77lm                      3/3     Running     4 (8h ago)   8h
+cattle-fleet-system         gitjob-7f565f8df8-b5fxf                               1/1     Running     4 (8h ago)   8h
+cattle-fleet-system         helmops-5b8b4f8cc8-4mrgh                              1/1     Running     0            8h
+cattle-system               rancher-5d74b5998f-5rhdh                              1/1     Running     0            8h
+cattle-system               rancher-webhook-57798dc756-7fc4c                      1/1     Running     0            8h
+cattle-turtles-system       rancher-turtles-controller-manager-74867b76f8-2hfrk   1/1     Running     0            8h
+fleet-local                 rke2-machineconfig-cleanup-cronjob-29865605-j2x4b     0/1     Completed   0            3h25m
+kube-system                 coredns-99d548bb9-kg25p                               1/1     Running     0            9h
+kube-system                 coredns-99d548bb9-ppmw9                               1/1     Running     0            9h
+kube-system                 etcd-mngmt-control-plane                              1/1     Running     0            9h
+kube-system                 kindnet-pnbcd                                         1/1     Running     0            9h
+kube-system                 kube-apiserver-mngmt-control-plane                    1/1     Running     0            9h
+kube-system                 kube-controller-manager-mngmt-control-plane           1/1     Running     0            9h
+kube-system                 kube-proxy-hcb9l                                      1/1     Running     0            9h
+kube-system                 kube-scheduler-mngmt-control-plane                    1/1     Running     0            9h
+local-path-storage          local-path-provisioner-56c4685b7c-xn7f8               1/1     Running     0            9h
+=== cluster-a ===
+node/cluster-a-control-plane condition met
+ok
+NAME                      STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION            CONTAINER-RUNTIME
+cluster-a-control-plane   Ready    control-plane   9h    v1.36.4   172.18.0.3    <none>        Debian GNU/Linux 13 (trixie)   7.0.12-linuxkit (arm64)   containerd://2.3.4
+yes
+NAMESPACE             NAME                                              READY   STATUS    RESTARTS   AGE
+cattle-fleet-system   fleet-agent-5564bbd7fc-72z22                      1/1     Running   0          8h
+cattle-system         cattle-cluster-agent-6b6bdbbd66-wzq9x             1/1     Running   0          8h
+cattle-system         rancher-webhook-6b5458456b-9sfcb                  1/1     Running   0          8h
+kube-system           coredns-65f48bbd54-s76nn                          1/1     Running   0          9h
+kube-system           coredns-65f48bbd54-tp2l4                          1/1     Running   0          9h
+kube-system           etcd-cluster-a-control-plane                      1/1     Running   0          9h
+kube-system           kindnet-2nq97                                     1/1     Running   0          9h
+kube-system           kube-apiserver-cluster-a-control-plane            1/1     Running   0          9h
+kube-system           kube-controller-manager-cluster-a-control-plane   1/1     Running   0          9h
+kube-system           kube-proxy-sp5mf                                  1/1     Running   0          9h
+kube-system           kube-scheduler-cluster-a-control-plane            1/1     Running   0          9h
+local-path-storage    local-path-provisioner-56c4685b7c-c49jp           1/1     Running   0          9h
+PASS: demo has no pods.
+=== cluster-b ===
+node/cluster-b-control-plane condition met
+ok
+NAME                      STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION            CONTAINER-RUNTIME
+cluster-b-control-plane   Ready    control-plane   9h    v1.36.4   172.18.0.4    <none>        Debian GNU/Linux 13 (trixie)   7.0.12-linuxkit (arm64)   containerd://2.3.4
+yes
+NAMESPACE             NAME                                              READY   STATUS    RESTARTS   AGE
+cattle-fleet-system   fleet-agent-5564bbd7fc-wjp27                      1/1     Running   0          8h
+cattle-system         cattle-cluster-agent-96f9b8bd4-wz5p9              1/1     Running   0          8h
+cattle-system         rancher-webhook-6b5458456b-fmdvw                  1/1     Running   0          8h
+kube-system           coredns-99c695976-9s6n7                           1/1     Running   0          9h
+kube-system           coredns-99c695976-lbglg                           1/1     Running   0          9h
+kube-system           etcd-cluster-b-control-plane                      1/1     Running   0          9h
+kube-system           kindnet-bpg22                                     1/1     Running   0          9h
+kube-system           kube-apiserver-cluster-b-control-plane            1/1     Running   0          9h
+kube-system           kube-controller-manager-cluster-b-control-plane   1/1     Running   0          9h
+kube-system           kube-proxy-zrjmz                                  1/1     Running   0          9h
+kube-system           kube-scheduler-cluster-b-control-plane            1/1     Running   0          9h
+local-path-storage    local-path-provisioner-56c4685b7c-76qrk           1/1     Running   0          9h
+PASS: demo has no pods.
+PASS: Docker usable memory exceeds 15 GiB (16 GiB configured).

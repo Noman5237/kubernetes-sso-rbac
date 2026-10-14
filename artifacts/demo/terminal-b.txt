@@ -1,0 +1,1 @@
+In B, listing pods succeeds. Creating deployments and reading secrets are allowed in demo. System namespace pods and cluster nodes remain denied. Permission checks do not create workloads. The dashboard and command line agree.

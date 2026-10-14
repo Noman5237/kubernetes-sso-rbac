@@ -1,0 +1,2 @@
+PASS: cluster-a Rancher-generated Alice kubeconfig; proxy URL, CA data, 1-hour TTL verified
+PASS: cluster-b Rancher-generated Alice kubeconfig; proxy URL, CA data, 1-hour TTL verified

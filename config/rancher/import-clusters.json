@@ -1,0 +1,4 @@
+[
+  {"type": "cluster", "name": "cluster-a", "description": "Local kind auth POC: application cluster A"},
+  {"type": "cluster", "name": "cluster-b", "description": "Local kind auth POC: application cluster B"}
+]

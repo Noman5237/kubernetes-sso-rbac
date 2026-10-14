@@ -1,0 +1,51 @@
+=== mngmt ===
+node/mngmt-control-plane condition met
+ok
+NAME                  STATUS   ROLES           AGE    VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION            CONTAINER-RUNTIME
+mngmt-control-plane   Ready    control-plane   6m1s   v1.36.4   172.18.0.2    <none>        Debian GNU/Linux 13 (trixie)   7.0.12-linuxkit (arm64)   containerd://2.3.4
+yes
+NAMESPACE            NAME                                          READY   STATUS    RESTARTS   AGE
+kube-system          coredns-99d548bb9-kg25p                       1/1     Running   0          82s
+kube-system          coredns-99d548bb9-ppmw9                       1/1     Running   0          82s
+kube-system          etcd-mngmt-control-plane                      1/1     Running   0          5m59s
+kube-system          kindnet-pnbcd                                 1/1     Running   0          5m51s
+kube-system          kube-apiserver-mngmt-control-plane            1/1     Running   0          5m59s
+kube-system          kube-controller-manager-mngmt-control-plane   1/1     Running   0          5m59s
+kube-system          kube-proxy-hcb9l                              1/1     Running   0          5m51s
+kube-system          kube-scheduler-mngmt-control-plane            1/1     Running   0          5m59s
+local-path-storage   local-path-provisioner-56c4685b7c-xn7f8       1/1     Running   0          5m51s
+=== cluster-a ===
+node/cluster-a-control-plane condition met
+ok
+NAME                      STATUS   ROLES           AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION            CONTAINER-RUNTIME
+cluster-a-control-plane   Ready    control-plane   5m35s   v1.36.4   172.18.0.3    <none>        Debian GNU/Linux 13 (trixie)   7.0.12-linuxkit (arm64)   containerd://2.3.4
+yes
+NAMESPACE            NAME                                              READY   STATUS    RESTARTS   AGE
+kube-system          coredns-65f48bbd54-s76nn                          1/1     Running   0          82s
+kube-system          coredns-65f48bbd54-tp2l4                          1/1     Running   0          82s
+kube-system          etcd-cluster-a-control-plane                      1/1     Running   0          5m33s
+kube-system          kindnet-2nq97                                     1/1     Running   0          5m27s
+kube-system          kube-apiserver-cluster-a-control-plane            1/1     Running   0          5m33s
+kube-system          kube-controller-manager-cluster-a-control-plane   1/1     Running   0          5m33s
+kube-system          kube-proxy-sp5mf                                  1/1     Running   0          5m27s
+kube-system          kube-scheduler-cluster-a-control-plane            1/1     Running   0          5m34s
+local-path-storage   local-path-provisioner-56c4685b7c-c49jp           1/1     Running   0          5m26s
+PASS: demo has no pods.
+=== cluster-b ===
+node/cluster-b-control-plane condition met
+ok
+NAME                      STATUS   ROLES           AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION            CONTAINER-RUNTIME
+cluster-b-control-plane   Ready    control-plane   5m10s   v1.36.4   172.18.0.4    <none>        Debian GNU/Linux 13 (trixie)   7.0.12-linuxkit (arm64)   containerd://2.3.4
+yes
+NAMESPACE            NAME                                              READY   STATUS    RESTARTS   AGE
+kube-system          coredns-99c695976-9s6n7                           1/1     Running   0          80s
+kube-system          coredns-99c695976-lbglg                           1/1     Running   0          80s
+kube-system          etcd-cluster-b-control-plane                      1/1     Running   0          5m7s
+kube-system          kindnet-bpg22                                     1/1     Running   0          5m2s
+kube-system          kube-apiserver-cluster-b-control-plane            1/1     Running   0          5m7s
+kube-system          kube-controller-manager-cluster-b-control-plane   1/1     Running   0          5m7s
+kube-system          kube-proxy-zrjmz                                  1/1     Running   0          5m2s
+kube-system          kube-scheduler-cluster-b-control-plane            1/1     Running   0          5m7s
+local-path-storage   local-path-provisioner-56c4685b7c-76qrk           1/1     Running   0          5m1s
+PASS: demo has no pods.
+PASS: Docker usable memory exceeds 15 GiB (16 GiB configured).
