@@ -1,0 +1,19 @@
+{
+  "nativeAdmin": [
+    {
+      "cluster": "mngmt",
+      "nativeAdmin": true
+    },
+    {
+      "cluster": "cluster-a",
+      "nativeAdmin": true
+    },
+    {
+      "cluster": "cluster-b",
+      "nativeAdmin": true
+    }
+  ],
+  "demoNamespacesEmpty": true,
+  "testLoginSessionsDeleted": true,
+  "testKubeconfigsAndTokensDeleted": true
+}

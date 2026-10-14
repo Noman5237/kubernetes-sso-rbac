@@ -35,7 +35,7 @@ A local CA signs separate certificates. Rancher and Keycloak trust explicit CA m
 
 Keycloak realm `kubernetes` has Alice, `no-role`, and dedicated setup identity `rancher-admin`. Client `rancher` is confidential, uses authorization code with S256 PKCE, profile/email scopes, and a Rancher audience. Implicit/password grants and client ServiceAccounts are disabled. No group membership carries permission.
 
-Rancher's restricted login allow-list contains Alice and the setup administrator. Newly authenticated users receive only `user-base`; login admission itself does not grant project access. `no-role` remains outside the allow-list. The dedicated setup identity is attached to the existing Rancher administrator; Alice is never used for provider enablement.
+Rancher's `accessMode: restricted` permits cluster/project members plus explicitly allowed users. Its explicit list contains Alice and the setup administrator; this is not strict allow-list-only mode (`required`). Newly authenticated users receive only `user-base`; login admission itself does not grant project access. `no-role` remains outside the allow-list. The dedicated setup identity is attached to the existing Rancher administrator; Alice is never used for provider enablement.
 
 | User | Role | Scope |
 |---|---|---|
@@ -56,7 +56,7 @@ Completed: fresh OIDC/PKCE Alice login without groups; direct-user bindings; per
 Next, after confirmation:
 
 1. Completed: Alice's one-hour Rancher-proxy kubeconfigs and matching kubectl/rendered-dashboard checks. [Step 8](docs/08-kubectl-and-dashboard.md).
-2. Test Rancher token expiry/revocation, direct role-binding removal, login allow-list removal, Keycloak account disablement, logout, and session refresh independently. Record enforcement delays.
+2. Completed: token expiry/revocation, binding removal, login-list removal, Keycloak disablement, and logout. [Step 9 results and observation limits](docs/09-credential-lifecycle.md). Long-duration OIDC refresh remains untested.
 3. Test restarts/outages and document lab-only unregister/cleanup commands.
 
 Rancher-issued kubeconfig credentials target its proxy. No per-cluster Keycloak client or downstream OIDC flags are required for this model. Rancher manages powerful agents; preserve local Rancher `admin`, Keycloak master `recovery-admin`, and direct admin kubeconfigs separately. A Rancher outage affects proxied access; direct recovery remains available.

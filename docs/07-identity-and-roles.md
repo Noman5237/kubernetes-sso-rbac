@@ -80,3 +80,7 @@ Password files remain under `secrets/keycloak/`: `alice-password`, `no-role-pass
 No Mac CA was installed. Automated tests use the explicit CA file and real authorization-code/PKCE flow; rendered dashboard testing is still pending. Full kubectl verification and credential lifecycle/outage tests are the next steps. Stop and wait for confirmation.
 
 Sources: [Rancher direct user/project assignments](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/add-users-to-projects), [login admission](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config), [Keycloak Admin REST API](https://www.keycloak.org/docs-api/latest/rest-api/index.html).
+
+## Step 9 clarification — login admission
+
+The configured `restricted` mode admits project/cluster members plus explicitly allowed users. Alice can still log in if her explicit allow-list entry is removed while she remains a project member. Strict allow-list-only mode is `required`; no mode change was made. See [Step 9](09-credential-lifecycle.md).

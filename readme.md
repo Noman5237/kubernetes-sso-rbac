@@ -24,7 +24,7 @@ Alice dashboard + kubectl → Rancher proxy → app-cluster Kubernetes APIs
 
 Three single-node kind clusters; no application workloads. Kubernetes system components and Rancher agents still run. Role templates are reusable; direct user-to-project bindings supply their scope. Native administrator and ServiceAccount authentication remain available.
 
-[Plan B](plan-b.md) is implemented through Step 8. [Plan A](plan.md) is the separate direct Kubernetes OIDC alternative. [Current TODO](todo.md).
+[Plan B](plan-b.md) is implemented through Step 9. [Plan A](plan.md) is the separate direct Kubernetes OIDC alternative. [Current TODO](todo.md).
 
 ## Completed and tested
 
@@ -35,7 +35,9 @@ Three single-node kind clusters; no application workloads. Kubernetes system com
 - A permits reads but denies deployment creation and Secret reads. B permits those actions inside `demo`. Both deny node and `kube-system` pod access.
 - Narrated demonstration recorded and exported with verified video/audio.
 
-**Pending:** credential expiry/revocation, account and binding removal, restart/outage tests, and final cleanup instructions. Execution pauses for confirmation between steps.
+Credential lifecycle checks are complete: revocation/expiry and binding removal stopped the intended access; Keycloak disablement did not immediately revoke existing Rancher credentials. See [Step 9](docs/09-credential-lifecycle.md).
+
+**Pending:** restart/outage tests, long-duration OIDC refresh behavior, and final cleanup instructions. Execution pauses for confirmation between steps.
 
 ## Follow the steps
 
@@ -49,6 +51,7 @@ Three single-node kind clusters; no application workloads. Kubernetes system com
 | 6 | [Import app clusters](docs/06-import-clusters.md) |
 | 7 | [Identity and direct role assignments](docs/07-identity-and-roles.md) |
 | 8 | [kubectl and dashboard verification](docs/08-kubectl-and-dashboard.md) |
+| 9 | [Credential lifecycle tests](docs/09-credential-lifecycle.md) |
 | Demo | [Recording and rerun procedure](docs/08b-narrated-demo.md) |
 
 Use the ordered documents and their referenced scripts. This repository captures the current local lab; Docker volumes and running cluster state are not Git backups. Generated IDs and credentials describe that lab instance.
@@ -59,7 +62,7 @@ Use the ordered documents and their referenced scripts. This repository captures
 - Rancher: `https://rancher.lab.test:8443`
 - Hostnames resolve to localhost on the Mac; Docker networking handles container access.
 - No CA is installed in macOS or host browsers. CLI clients use explicit CA trust; the isolated demo browser trusts the lab CA inside its container.
-- Local POC secrets, private keys, registration manifests, and kubeconfigs are intentionally retained in this private repository at the owner's request.
+- Local POC secrets, private keys, registration manifests, and kubeconfigs are intentionally retained in this repository at the owner's request.
 - Alice's generated kubeconfig tokens currently last **one hour**. Six-month tokens were discussed but not enabled. Regeneration replaces the matching previous lab kubeconfigs.
 
 ## Files

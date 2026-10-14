@@ -54,7 +54,7 @@ No HA, sample applications, custom CRDs, or dashboard extensions. Kubernetes sys
 
 - [x] Create Keycloak realm `kubernetes` and a Rancher OIDC client with identity-only claims, exact callback, S256 PKCE, and protected client secret; no group mappers.
 - [x] Create Alice and a no-role test user; remove obsolete POC groups/memberships and group-claim mappers. Preserve stable user IDs.
-- [x] Enable Keycloak login with a Rancher-managed user allow-list, minimal user-base default, and protected recovery access.
+- [x] Enable Keycloak login with Rancher `restricted` admission (project/cluster members plus explicitly allowed users), minimal user-base default, and protected recovery access.
 - [x] Create one Rancher demo project per app cluster containing only `demo`.
 - [x] Define reusable `lab-developer` and `lab-namespace-admin` roles. Use explicit namespaced resources; avoid wildcard promotion, global admin, and Cluster Owner.
 - [x] Bind Alice directly to `lab-developer` in A/demo and `lab-namespace-admin` in B/demo. Remove old group bindings/roles and verify Rancher-generated User bindings in Kubernetes.
@@ -78,7 +78,8 @@ Completed with actual Alice kubeconfigs and an isolated trusted Chromium browser
 
 ## 6. Verify credential lifecycle and finish
 
-- [ ] Test Rancher token expiry/revocation, Keycloak account disablement, direct Rancher user-role binding removal, login allow-list removal, and logout independently; record enforcement delays.
+- [x] Test Rancher token expiry/revocation, Keycloak account disablement, direct Rancher user-role binding removal, login allow-list removal, and logout independently; record enforcement observations and bounds. [Step 9](docs/09-credential-lifecycle.md).
+- [ ] If needed for rollout, test long-duration OIDC refresh/resync and browser single logout; the Step 9 existing-token observation windows were 20 seconds.
 - [ ] Test Rancher/Keycloak restart and outage behavior, preserving direct recovery access.
 - [ ] Verify invalid TLS trust fails and Mac trust stores remain unchanged.
 - [ ] Save sanitized permission results and lab-only cleanup/unregistration steps; exclude tokens, client secrets, keys, and registration credentials.

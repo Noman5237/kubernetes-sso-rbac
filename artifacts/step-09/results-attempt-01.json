@@ -1,0 +1,34 @@
+{
+  "startedAt": "2026-10-14T07:32:12.290502+00:00",
+  "observations": [
+    {
+      "test": "baseline",
+      "aliceFreshOIDC": true,
+      "clusterA": 200,
+      "clusterB": 200
+    }
+  ],
+  "createdKubeconfigs": [
+    {
+      "name": "kubeconfig-9h8t5",
+      "label": "control",
+      "ttlSeconds": 900,
+      "created": "2026-10-14T07:32:12Z",
+      "tokens": [
+        "token-22bqd"
+      ]
+    },
+    {
+      "name": "kubeconfig-999cc",
+      "label": "revocation",
+      "ttlSeconds": 300,
+      "created": "2026-10-14T07:32:12Z",
+      "tokens": [
+        "token-68dzp"
+      ]
+    }
+  ],
+  "restored": true,
+  "testCredentialsRevoked": true,
+  "finishedAt": "2026-10-14T07:32:58.372375+00:00"
+}

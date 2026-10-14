@@ -1,0 +1,12 @@
+baseline {"aliceFreshOIDC": true, "clusterA": 200, "clusterB": 200}
+RESTORED: Alice enabled, original admission and A binding restored; disposable credentials revoked
+Traceback (most recent call last):
+  File "/Users/mdabdullahal.noman/Workshops/kubernetes-sso-rbac/scripts/09-credential-lifecycle.py", line 171, in <module>
+    else:run()
+         ~~~^^
+  File "/Users/mdabdullahal.noman/Workshops/kubernetes-sso-rbac/scripts/09-credential-lifecycle.py", line 114, in run
+    timing=until(lambda:probe(revoked),{401})
+  File "/Users/mdabdullahal.noman/Workshops/kubernetes-sso-rbac/scripts/09-credential-lifecycle.py", line 74, in until
+    if elapsed>=seconds:raise AssertionError('Expected status not observed: '+json.dumps(samples))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected status not observed: [{"elapsedSeconds": 0.046, "httpStatus": 403}, {"elapsedSeconds": 2.095, "httpStatus": 403}, {"elapsedSeconds": 4.151, "httpStatus": 403}, {"elapsedSeconds": 6.22, "httpStatus": 403}, {"elapsedSeconds": 8.278, "httpStatus": 403}, {"elapsedSeconds": 10.328, "httpStatus": 403}, {"elapsedSeconds": 12.367, "httpStatus": 403}, {"elapsedSeconds": 14.439, "httpStatus": 403}, {"elapsedSeconds": 16.477, "httpStatus": 403}, {"elapsedSeconds": 18.526, "httpStatus": 403}, {"elapsedSeconds": 20.575, "httpStatus": 403}, {"elapsedSeconds": 22.631, "httpStatus": 403}, {"elapsedSeconds": 24.698, "httpStatus": 403}, {"elapsedSeconds": 26.756, "httpStatus": 403}, {"elapsedSeconds": 28.806, "httpStatus": 403}, {"elapsedSeconds": 30.853, "httpStatus": 403}, {"elapsedSeconds": 32.902, "httpStatus": 403}, {"elapsedSeconds": 34.952, "httpStatus": 403}, {"elapsedSeconds": 37.003, "httpStatus": 403}, {"elapsedSeconds": 39.079, "httpStatus": 403}, {"elapsedSeconds": 41.121, "httpStatus": 403}, {"elapsedSeconds": 43.187, "httpStatus": 403}, {"elapsedSeconds": 45.238, "httpStatus": 403}]

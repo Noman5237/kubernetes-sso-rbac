@@ -1,0 +1,238 @@
+{
+  "startedAt": "2026-10-14T07:33:39.999852+00:00",
+  "observations": [
+    {
+      "test": "baseline",
+      "aliceFreshOIDC": true,
+      "clusterA": 200,
+      "clusterB": 200
+    },
+    {
+      "test": "kubeconfigDeletion",
+      "observedWithinSeconds": 0.034,
+      "samples": [
+        {
+          "elapsedSeconds": 0.034,
+          "httpStatus": 403
+        }
+      ],
+      "associatedTokens": {
+        "token-gzqb6": 404
+      },
+      "independentKubeconfigStatus": 200
+    },
+    {
+      "test": "tokenExpiry",
+      "requestedTTLSeconds": 20,
+      "expiresAt": "2026-10-14T07:34:00Z",
+      "observedWithinSeconds": 20.68,
+      "samples": [
+        {
+          "elapsedSeconds": 0.035,
+          "httpStatus": 200
+        },
+        {
+          "elapsedSeconds": 2.098,
+          "httpStatus": 200
+        },
+        {
+          "elapsedSeconds": 4.171,
+          "httpStatus": 200
+        },
+        {
+          "elapsedSeconds": 6.269,
+          "httpStatus": 200
+        },
+        {
+          "elapsedSeconds": 8.311,
+          "httpStatus": 200
+        },
+        {
+          "elapsedSeconds": 10.361,
+          "httpStatus": 200
+        },
+        {
+          "elapsedSeconds": 12.429,
+          "httpStatus": 200
+        },
+        {
+          "elapsedSeconds": 14.509,
+          "httpStatus": 200
+        },
+        {
+          "elapsedSeconds": 16.567,
+          "httpStatus": 200
+        },
+        {
+          "elapsedSeconds": 18.616,
+          "httpStatus": 200
+        },
+        {
+          "elapsedSeconds": 20.68,
+          "httpStatus": 403
+        }
+      ]
+    },
+    {
+      "test": "rancherLogout",
+      "observedWithinSeconds": 0.004,
+      "samples": [
+        {
+          "elapsedSeconds": 0.004,
+          "httpStatus": 401
+        }
+      ],
+      "independentlyIssuedKubeconfigStatus": 200
+    },
+    {
+      "test": "projectBindingRemoval",
+      "observedWithinSeconds": 0.04,
+      "samples": [
+        {
+          "elapsedSeconds": 0.04,
+          "httpStatus": 403
+        }
+      ],
+      "clusterBStatus": 200
+    },
+    {
+      "test": "projectBindingRestored",
+      "observedWithinSeconds": 0.047,
+      "samples": [
+        {
+          "elapsedSeconds": 0.047,
+          "httpStatus": 200
+        }
+      ]
+    },
+    {
+      "test": "keycloakDisabled",
+      "newLogin": {
+        "allowed": false,
+        "stage": "keycloak",
+        "reason": "Account is disabled"
+      },
+      "existingCredentials": [
+        {
+          "elapsedSeconds": 0.0,
+          "kubeconfigStatus": 200,
+          "sessionStatus": 200
+        },
+        {
+          "elapsedSeconds": 5.057,
+          "kubeconfigStatus": 200,
+          "sessionStatus": 200
+        },
+        {
+          "elapsedSeconds": 10.149,
+          "kubeconfigStatus": 200,
+          "sessionStatus": 200
+        },
+        {
+          "elapsedSeconds": 15.246,
+          "kubeconfigStatus": 200,
+          "sessionStatus": 200
+        },
+        {
+          "elapsedSeconds": 20.341,
+          "kubeconfigStatus": 200,
+          "sessionStatus": 200
+        }
+      ]
+    },
+    {
+      "test": "keycloakReenabled",
+      "newLoginAllowed": true
+    },
+    {
+      "test": "loginAllowListRemoval",
+      "accessMode": "restricted",
+      "newLogins": [
+        {
+          "attempt": 1,
+          "allowed": true,
+          "stage": "rancher",
+          "keycloakCodeReturned": true
+        },
+        {
+          "attempt": 2,
+          "allowed": true,
+          "stage": "rancher",
+          "keycloakCodeReturned": true
+        },
+        {
+          "attempt": 3,
+          "allowed": true,
+          "stage": "rancher",
+          "keycloakCodeReturned": true
+        }
+      ],
+      "existingCredentials": [
+        {
+          "elapsedSeconds": 0.0,
+          "kubeconfigStatus": 200,
+          "sessionStatus": 200
+        },
+        {
+          "elapsedSeconds": 5.105,
+          "kubeconfigStatus": 200,
+          "sessionStatus": 200
+        },
+        {
+          "elapsedSeconds": 10.17,
+          "kubeconfigStatus": 200,
+          "sessionStatus": 200
+        },
+        {
+          "elapsedSeconds": 15.26,
+          "kubeconfigStatus": 200,
+          "sessionStatus": 200
+        },
+        {
+          "elapsedSeconds": 20.333,
+          "kubeconfigStatus": 200,
+          "sessionStatus": 200
+        }
+      ]
+    }
+  ],
+  "createdKubeconfigs": [
+    {
+      "name": "kubeconfig-b9tcc",
+      "label": "control",
+      "ttlSeconds": 900,
+      "created": "2026-10-14T07:33:40Z",
+      "tokens": [
+        "token-cdn88"
+      ]
+    },
+    {
+      "name": "kubeconfig-97jk9",
+      "label": "revocation",
+      "ttlSeconds": 300,
+      "created": "2026-10-14T07:33:40Z",
+      "tokens": [
+        "token-gzqb6"
+      ]
+    },
+    {
+      "name": "kubeconfig-jgwch",
+      "label": "expiry",
+      "ttlSeconds": 20,
+      "created": "2026-10-14T07:33:40Z",
+      "tokens": [
+        "token-sl65n"
+      ]
+    },
+    {
+      "name": "kubeconfig-kgz99",
+      "label": "logout",
+      "ttlSeconds": 600,
+      "created": "2026-10-14T07:34:01Z",
+      "tokens": [
+        "token-r4lxm"
+      ]
+    }
+  ],
+  "restored": false
+}

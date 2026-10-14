@@ -1,0 +1,19 @@
+{
+  "keycloakEnabled": true,
+  "admission": {
+    "accessMode": "restricted",
+    "allowedPrincipalIds": [
+      "keycloakoidc_user://7f7f41e1-3df7-4569-8b01-4fd3597ddb09",
+      "keycloakoidc_user://ba4eba94-5fb4-4524-be94-3319e29d2402"
+    ],
+    "groupSearchEnabled": false
+  },
+  "binding": {
+    "id": "c-xncbh-p-gt9n6:prtb-v5sstkuddx",
+    "type": "projectRoleTemplateBinding",
+    "name": "prtb-v5sstkuddx",
+    "projectId": "c-xncbh:p-gt9n6",
+    "roleTemplateId": "rt-g8ssj",
+    "userId": "u-mcplx3f5xw"
+  }
+}

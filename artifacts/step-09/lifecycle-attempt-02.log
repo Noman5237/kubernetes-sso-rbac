@@ -1,0 +1,23 @@
+baseline {"aliceFreshOIDC": true, "clusterA": 200, "clusterB": 200}
+kubeconfigDeletion {"observedWithinSeconds": 0.034, "samples": [{"elapsedSeconds": 0.034, "httpStatus": 403}], "associatedTokens": {"token-gzqb6": 404}, "independentKubeconfigStatus": 200}
+tokenExpiry {"requestedTTLSeconds": 20, "expiresAt": "2026-10-14T07:34:00Z", "observedWithinSeconds": 20.68, "samples": [{"elapsedSeconds": 0.035, "httpStatus": 200}, {"elapsedSeconds": 2.098, "httpStatus": 200}, {"elapsedSeconds": 4.171, "httpStatus": 200}, {"elapsedSeconds": 6.269, "httpStatus": 200}, {"elapsedSeconds": 8.311, "httpStatus": 200}, {"elapsedSeconds": 10.361, "httpStatus": 200}, {"elapsedSeconds": 12.429, "httpStatus": 200}, {"elapsedSeconds": 14.509, "httpStatus": 200}, {"elapsedSeconds": 16.567, "httpStatus": 200}, {"elapsedSeconds": 18.616, "httpStatus": 200}, {"elapsedSeconds": 20.68, "httpStatus": 403}]}
+rancherLogout {"observedWithinSeconds": 0.004, "samples": [{"elapsedSeconds": 0.004, "httpStatus": 401}], "independentlyIssuedKubeconfigStatus": 200}
+projectBindingRemoval {"observedWithinSeconds": 0.04, "samples": [{"elapsedSeconds": 0.04, "httpStatus": 403}], "clusterBStatus": 200}
+projectBindingRestored {"observedWithinSeconds": 0.047, "samples": [{"elapsedSeconds": 0.047, "httpStatus": 200}]}
+keycloakDisabled {"newLogin": {"allowed": false, "stage": "keycloak", "reason": "Account is disabled"}, "existingCredentials": [{"elapsedSeconds": 0.0, "kubeconfigStatus": 200, "sessionStatus": 200}, {"elapsedSeconds": 5.057, "kubeconfigStatus": 200, "sessionStatus": 200}, {"elapsedSeconds": 10.149, "kubeconfigStatus": 200, "sessionStatus": 200}, {"elapsedSeconds": 15.246, "kubeconfigStatus": 200, "sessionStatus": 200}, {"elapsedSeconds": 20.341, "kubeconfigStatus": 200, "sessionStatus": 200}]}
+keycloakReenabled {"newLoginAllowed": true}
+loginAllowListRemoval {"accessMode": "restricted", "newLogins": [{"attempt": 1, "allowed": true, "stage": "rancher", "keycloakCodeReturned": true}, {"attempt": 2, "allowed": true, "stage": "rancher", "keycloakCodeReturned": true}, {"attempt": 3, "allowed": true, "stage": "rancher", "keycloakCodeReturned": true}], "existingCredentials": [{"elapsedSeconds": 0.0, "kubeconfigStatus": 200, "sessionStatus": 200}, {"elapsedSeconds": 5.105, "kubeconfigStatus": 200, "sessionStatus": 200}, {"elapsedSeconds": 10.17, "kubeconfigStatus": 200, "sessionStatus": 200}, {"elapsedSeconds": 15.26, "kubeconfigStatus": 200, "sessionStatus": 200}, {"elapsedSeconds": 20.333, "kubeconfigStatus": 200, "sessionStatus": 200}]}
+Traceback (most recent call last):
+  File "/Users/mdabdullahal.noman/Workshops/kubernetes-sso-rbac/scripts/09-credential-lifecycle.py", line 173, in <module>
+    else:run()
+         ~~~^^
+  File "/Users/mdabdullahal.noman/Workshops/kubernetes-sso-rbac/scripts/09-credential-lifecycle.py", line 156, in run
+    restore(admin,k,baseline)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/mdabdullahal.noman/Workshops/kubernetes-sso-rbac/scripts/09-credential-lifecycle.py", line 87, in restore
+    k.request(user_path,{'enabled':baseline['keycloakEnabled']},method='PUT')
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdabdullahal.noman/Workshops/kubernetes-sso-rbac/scripts/keycloak_api.py", line 18, in request
+    except urllib.error.HTTPError as e:raise RuntimeError('Keycloak HTTP '+str(e.code)) from None
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Keycloak HTTP 401
