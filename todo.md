@@ -76,6 +76,8 @@ Completed with actual Alice kubeconfigs and an isolated trusted Chromium browser
 
 - [x] Record a narrated walkthrough of Keycloak identity, reusable Rancher roles, direct project bindings, Alice dashboard access, and actual kubectl results. [Video procedure and evidence](docs/08b-narrated-demo.md). Duration: 2 minutes 58 seconds. Roles unchanged; one-hour kubeconfigs refreshed for the demo.
 
+- [x] Publish a silent 56-second capabilities GIF embedded directly in the GitHub README. [Build and verification](docs/09b-readme-gif.md).
+
 ## 6. Verify credential lifecycle and finish
 
 - [x] Test Rancher token expiry/revocation, Keycloak account disablement, direct Rancher user-role binding removal, login allow-list removal, and logout independently; record enforcement observations and bounds. [Step 9](docs/09-credential-lifecycle.md).

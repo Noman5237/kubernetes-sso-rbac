@@ -1,0 +1,89 @@
+{
+  "durationSeconds": 56,
+  "bytes": 1812898,
+  "width": 1080,
+  "height": 676,
+  "audio": false,
+  "loop": "infinite",
+  "scenes": [
+    {
+      "id": "overview",
+      "duration": 4,
+      "card": true
+    },
+    {
+      "id": "identity",
+      "duration": 6,
+      "clip": 1,
+      "start": 0.8,
+      "take": 12
+    },
+    {
+      "id": "roles",
+      "duration": 4,
+      "clip": 2,
+      "start": 2,
+      "take": 4
+    },
+    {
+      "id": "binding-a",
+      "duration": 4,
+      "clip": 3,
+      "start": 2,
+      "take": 4
+    },
+    {
+      "id": "binding-b",
+      "duration": 4,
+      "clip": 4,
+      "start": 2,
+      "take": 4
+    },
+    {
+      "id": "home",
+      "duration": 4,
+      "clip": 5,
+      "start": 2,
+      "take": 4
+    },
+    {
+      "id": "dashboard-a",
+      "duration": 4,
+      "clip": 6,
+      "start": 2,
+      "take": 4
+    },
+    {
+      "id": "dashboard-b",
+      "duration": 4,
+      "clip": 7,
+      "start": 2,
+      "take": 4
+    },
+    {
+      "id": "terminal-a",
+      "duration": 5,
+      "clip": 8,
+      "start": 11,
+      "take": 5
+    },
+    {
+      "id": "terminal-b",
+      "duration": 5,
+      "clip": 9,
+      "start": 10,
+      "take": 5
+    },
+    {
+      "id": "lifecycle",
+      "duration": 7,
+      "card": true
+    },
+    {
+      "id": "boundaries",
+      "duration": 5,
+      "card": true
+    }
+  ],
+  "fullDecodePassed": true
+}

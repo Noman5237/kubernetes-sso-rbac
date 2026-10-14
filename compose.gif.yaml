@@ -1,0 +1,12 @@
+name: kubernetes-sso-gif
+services:
+  media:
+    image: sso-lab-browser:1.58.2
+    container_name: sso-lab-gif
+    command: ["sleep", "infinity"]
+    shm_size: 512mb
+    volumes:
+      - ./scripts:/scripts:ro
+      - ./artifacts/demo:/source:ro
+      - ./artifacts/gif:/output
+      - ./demo:/publish

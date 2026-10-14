@@ -4,6 +4,10 @@ Local proof of concept: **Keycloak authenticates Alice; Rancher assigns her perm
 
 ## Demo
 
+![56-second POC walkthrough: Keycloak identity, Rancher roles, multi-cluster dashboard, kubectl permissions, and credential lifecycle](demo/poc-overview.gif)
+
+**56 seconds · silent · loops automatically.** Recorded browser screens and actual kubectl results, plus verified lifecycle findings. [GIF build procedure](docs/09b-readme-gif.md).
+
 **[Watch the narrated demo — 2 minutes 58 seconds](demo/kubernetes-sso-rbac-demo.mp4)**
 
 Real Keycloak and Rancher pages with callouts, followed by playback of actual kubectl results. [Transcript and chapters](artifacts/demo/transcript.md) · [Recording procedure](docs/08b-narrated-demo.md).
