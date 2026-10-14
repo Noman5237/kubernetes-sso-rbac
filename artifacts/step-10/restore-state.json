@@ -1,0 +1,258 @@
+{
+  "rancherReplicas": 1,
+  "keycloakRunning": true,
+  "config": {
+    "keycloak": {
+      "realmId": "f2809110-e73b-4063-926a-0cd5bdc805be",
+      "realmEnabled": true,
+      "aliceId": "ba4eba94-5fb4-4524-be94-3319e29d2402",
+      "aliceEnabled": true,
+      "groups": [],
+      "client": {
+        "id": "714b275c-f318-4aa6-9564-7b3d9c9b3fcf",
+        "clientId": "rancher",
+        "enabled": true,
+        "redirectUris": [
+          "https://rancher.lab.test:8443/verify-auth"
+        ],
+        "standardFlowEnabled": true,
+        "directAccessGrantsEnabled": false,
+        "implicitFlowEnabled": false,
+        "publicClient": false
+      }
+    },
+    "rancher": {
+      "auth": {
+        "enabled": true,
+        "accessMode": "restricted",
+        "allowedPrincipalIds": [
+          "keycloakoidc_user://7f7f41e1-3df7-4569-8b01-4fd3597ddb09",
+          "keycloakoidc_user://ba4eba94-5fb4-4524-be94-3319e29d2402"
+        ],
+        "groupSearchEnabled": false
+      },
+      "roles": [
+        {
+          "id": "rt-g8ssj",
+          "name": "lab-developer",
+          "context": "project",
+          "rules": [
+            {
+              "apiGroups": [
+                ""
+              ],
+              "resources": [
+                "pods"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "get",
+                "list",
+                "watch"
+              ]
+            },
+            {
+              "apiGroups": [
+                "apps"
+              ],
+              "resources": [
+                "deployments"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "get",
+                "list",
+                "watch"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rt-dq8ns",
+          "name": "lab-namespace-admin",
+          "context": "project",
+          "rules": [
+            {
+              "apiGroups": [
+                ""
+              ],
+              "resources": [
+                "pods",
+                "pods/attach",
+                "pods/exec",
+                "pods/log",
+                "pods/portforward",
+                "pods/eviction",
+                "pods/status",
+                "pods/ephemeralcontainers",
+                "services",
+                "services/proxy",
+                "endpoints",
+                "configmaps",
+                "secrets",
+                "persistentvolumeclaims",
+                "persistentvolumeclaims/status",
+                "serviceaccounts",
+                "serviceaccounts/token",
+                "replicationcontrollers",
+                "replicationcontrollers/scale",
+                "replicationcontrollers/status",
+                "resourcequotas",
+                "resourcequotas/status",
+                "limitranges",
+                "events",
+                "podtemplates"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "*"
+              ]
+            },
+            {
+              "apiGroups": [
+                "apps"
+              ],
+              "resources": [
+                "deployments",
+                "deployments/scale",
+                "deployments/status",
+                "replicasets",
+                "replicasets/scale",
+                "replicasets/status",
+                "statefulsets",
+                "statefulsets/scale",
+                "statefulsets/status",
+                "daemonsets",
+                "daemonsets/status",
+                "controllerrevisions"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "*"
+              ]
+            },
+            {
+              "apiGroups": [
+                "batch"
+              ],
+              "resources": [
+                "jobs",
+                "jobs/status",
+                "cronjobs",
+                "cronjobs/status"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "*"
+              ]
+            },
+            {
+              "apiGroups": [
+                "autoscaling"
+              ],
+              "resources": [
+                "horizontalpodautoscalers",
+                "horizontalpodautoscalers/status"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "*"
+              ]
+            },
+            {
+              "apiGroups": [
+                "networking.k8s.io"
+              ],
+              "resources": [
+                "ingresses",
+                "ingresses/status",
+                "networkpolicies"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "*"
+              ]
+            },
+            {
+              "apiGroups": [
+                "policy"
+              ],
+              "resources": [
+                "poddisruptionbudgets",
+                "poddisruptionbudgets/status"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "*"
+              ]
+            },
+            {
+              "apiGroups": [
+                "rbac.authorization.k8s.io"
+              ],
+              "resources": [
+                "roles",
+                "rolebindings"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "*"
+              ]
+            },
+            {
+              "apiGroups": [
+                "coordination.k8s.io"
+              ],
+              "resources": [
+                "leases"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "*"
+              ]
+            },
+            {
+              "apiGroups": [
+                "discovery.k8s.io"
+              ],
+              "resources": [
+                "endpointslices"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "*"
+              ]
+            },
+            {
+              "apiGroups": [
+                "events.k8s.io"
+              ],
+              "resources": [
+                "events"
+              ],
+              "type": "/v3/schemas/policyRule",
+              "verbs": [
+                "*"
+              ]
+            }
+          ]
+        }
+      ],
+      "bindings": [
+        {
+          "id": "c-xncbh-p-gt9n6:prtb-v5sstkuddx",
+          "projectId": "c-xncbh:p-gt9n6",
+          "roleTemplateId": "rt-g8ssj",
+          "userId": "u-mcplx3f5xw"
+        },
+        {
+          "id": "c-cs8x9-p-mclsj:prtb-xqcfidcv6a",
+          "projectId": "c-cs8x9:p-mclsj",
+          "roleTemplateId": "rt-dq8ns",
+          "userId": "u-mcplx3f5xw"
+        }
+      ],
+      "serverUrl": "https://rancher.lab.test:8443"
+    }
+  }
+}

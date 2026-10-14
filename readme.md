@@ -4,9 +4,9 @@ Local proof of concept: **Keycloak authenticates Alice; Rancher assigns her perm
 
 ## Demo
 
-![56-second POC walkthrough: Keycloak identity, Rancher roles, multi-cluster dashboard, kubectl permissions, and credential lifecycle](demo/poc-overview.gif)
+![59-second POC walkthrough: Keycloak identity, Rancher roles, multi-cluster dashboard, kubectl permissions, credential lifecycle, and reliability results](demo/poc-overview.gif)
 
-**56 seconds · silent · loops automatically.** Recorded browser screens and actual kubectl results, plus verified lifecycle findings. [GIF build procedure](docs/09b-readme-gif.md).
+**59 seconds · silent · loops automatically.** Covers Steps 1–10: recorded browser screens and actual kubectl results, plus verified credential lifecycle and service outage/recovery findings. [GIF build procedure](docs/09b-readme-gif.md).
 
 **[Watch the narrated demo — 2 minutes 58 seconds](demo/kubernetes-sso-rbac-demo.mp4)**
 
@@ -28,7 +28,7 @@ Alice dashboard + kubectl → Rancher proxy → app-cluster Kubernetes APIs
 
 Three single-node kind clusters; no application workloads. Kubernetes system components and Rancher agents still run. Role templates are reusable; direct user-to-project bindings supply their scope. Native administrator and ServiceAccount authentication remain available.
 
-[Plan B](plan-b.md) is implemented through Step 9. [Plan A](plan.md) is the separate direct Kubernetes OIDC alternative. [Current TODO](todo.md).
+[Plan B](plan-b.md) is implemented through Step 10. [Plan A](plan.md) is the separate direct Kubernetes OIDC alternative. [Current TODO](todo.md).
 
 ## Completed and tested
 
@@ -41,7 +41,9 @@ Three single-node kind clusters; no application workloads. Kubernetes system com
 
 Credential lifecycle checks are complete: revocation/expiry and binding removal stopped the intended access; Keycloak disablement did not immediately revoke existing Rancher credentials. See [Step 9](docs/09-credential-lifecycle.md).
 
-**Pending:** restart/outage tests, long-duration OIDC refresh behavior, and final cleanup instructions. Execution pauses for confirmation between steps.
+Reliability checks are complete: Keycloak and Rancher recovered with configuration intact, and direct Kubernetes admin/ServiceAccount access worked during the Rancher outage. [Step 10](docs/10-reliability.md). [Cleanup instructions](docs/11-lab-cleanup.md) are available; no teardown was performed.
+
+**Further testing:** long-duration OIDC refresh/resync, database/host failures, backup restore, managed-cloud rollout, and HA are outside the completed local checks. Execution pauses for confirmation between steps.
 
 ## Follow the steps
 
@@ -56,6 +58,8 @@ Credential lifecycle checks are complete: revocation/expiry and binding removal 
 | 7 | [Identity and direct role assignments](docs/07-identity-and-roles.md) |
 | 8 | [kubectl and dashboard verification](docs/08-kubectl-and-dashboard.md) |
 | 9 | [Credential lifecycle tests](docs/09-credential-lifecycle.md) |
+| 10 | [Outage, recovery, and TLS verification](docs/10-reliability.md) |
+| Cleanup | [Optional lab teardown instructions](docs/11-lab-cleanup.md) |
 | Demo | [Recording and rerun procedure](docs/08b-narrated-demo.md) |
 
 Use the ordered documents and their referenced scripts. This repository captures the current local lab; Docker volumes and running cluster state are not Git backups. Generated IDs and credentials describe that lab instance.

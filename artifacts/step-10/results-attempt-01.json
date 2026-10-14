@@ -1,0 +1,38 @@
+{
+  "startedAt": "2026-10-14T09:17:17.017623+00:00",
+  "observations": [
+    {
+      "test": "baseline",
+      "dashboardStatus": 200,
+      "native": [
+        {
+          "cluster": "mngmt",
+          "nativeAdministrator": true
+        },
+        {
+          "cluster": "cluster-a",
+          "nativeAdministrator": true
+        },
+        {
+          "cluster": "cluster-b",
+          "nativeAdministrator": true
+        }
+      ]
+    }
+  ],
+  "testSessionIds": [
+    "token-577fk"
+  ],
+  "testKubeconfigs": [
+    {
+      "name": "kubeconfig-tt6x2",
+      "tokens": [
+        "token-t6txn"
+      ],
+      "ttlSeconds": 1800
+    }
+  ],
+  "restored": true,
+  "testCredentialsRevoked": true,
+  "finishedAt": "2026-10-14T09:17:33.101017+00:00"
+}

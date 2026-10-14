@@ -1,0 +1,36 @@
+{
+  "httpReady": {
+    "rancherDashboard": 200,
+    "keycloakDiscovery": 200
+  },
+  "nativeClusters": [
+    {
+      "cluster": "mngmt",
+      "nativeAdmin": true,
+      "singleNodeReady": true
+    },
+    {
+      "cluster": "cluster-a",
+      "nativeAdmin": true,
+      "singleNodeReady": true
+    },
+    {
+      "cluster": "cluster-b",
+      "nativeAdmin": true,
+      "singleNodeReady": true
+    }
+  ],
+  "rancherReplicas": 1,
+  "rancherReady": true,
+  "keycloakAndGatewayRunning": true,
+  "postgresHealthy": true,
+  "testCredentialsDeleted": true,
+  "trustedTLS": "TLSv1.3",
+  "wrongCARejected": true,
+  "labCANotInCheckedMacKeychains": [
+    "/Users/mdabdullahal.noman/Library/Keychains/login.keychain-db",
+    "/Users/mdabdullahal.noman/Library/Keychains/openvpn.keychain-db",
+    "/Library/Keychains/System.keychain",
+    "/System/Library/Keychains/SystemRootCertificates.keychain"
+  ]
+}

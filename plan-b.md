@@ -57,7 +57,7 @@ Next, after confirmation:
 
 1. Completed: Alice's one-hour Rancher-proxy kubeconfigs and matching kubectl/rendered-dashboard checks. [Step 8](docs/08-kubectl-and-dashboard.md).
 2. Completed: token expiry/revocation, binding removal, login-list removal, Keycloak disablement, and logout. [Step 9 results and observation limits](docs/09-credential-lifecycle.md). Long-duration OIDC refresh remains untested.
-3. Test restarts/outages and document lab-only unregister/cleanup commands.
+3. Completed: controlled Keycloak/Rancher outages and recovery, unchanged configuration/permissions, native recovery access, and TLS trust checks. [Step 10](docs/10-reliability.md). [Cleanup instructions](docs/11-lab-cleanup.md) are documented, not executed.
 
 Rancher-issued kubeconfig credentials target its proxy. No per-cluster Keycloak client or downstream OIDC flags are required for this model. Rancher manages powerful agents; preserve local Rancher `admin`, Keycloak master `recovery-admin`, and direct admin kubeconfigs separately. A Rancher outage affects proxied access; direct recovery remains available.
 

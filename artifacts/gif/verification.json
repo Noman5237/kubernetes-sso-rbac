@@ -1,6 +1,6 @@
 {
-  "durationSeconds": 56,
-  "bytes": 1812898,
+  "durationSeconds": 59,
+  "bytes": 1827383,
   "width": 1080,
   "height": 676,
   "audio": false,
@@ -8,7 +8,7 @@
   "scenes": [
     {
       "id": "overview",
-      "duration": 4,
+      "duration": 3,
       "card": true
     },
     {
@@ -81,7 +81,12 @@
     },
     {
       "id": "boundaries",
-      "duration": 5,
+      "duration": 3,
+      "card": true
+    },
+    {
+      "id": "reliability",
+      "duration": 6,
       "card": true
     }
   ],

@@ -1,0 +1,14 @@
+baseline {"dashboardStatus": 200, "native": [{"cluster": "mngmt", "nativeAdministrator": true}, {"cluster": "cluster-a", "nativeAdministrator": true}, {"cluster": "cluster-b", "nativeAdministrator": true}]}
+Stopping Keycloak only
+keycloakOutage {"discoveryStatus": "network-unavailable", "newLogin": {"allowed": false, "reason": "network-unavailable"}, "dashboardStatus": 200, "localRancherAdminLogin": true, "existingCredentials": [{"elapsedSeconds": 0.0, "rancherSession": 200, "clusterA": 200, "clusterB": 200}, {"elapsedSeconds": 5.294, "rancherSession": 200, "clusterA": 200, "clusterB": 200}, {"elapsedSeconds": 10.409, "rancherSession": 200, "clusterA": 200, "clusterB": 200}, {"elapsedSeconds": 15.55, "rancherSession": 200, "clusterA": 200, "clusterB": 200}, {"elapsedSeconds": 20.65, "rancherSession": 200, "clusterA": 200, "clusterB": 200}]}
+Starting Keycloak
+Waiting for readiness: 0 seconds; status 502
+keycloakRecovered {"recoverySeconds": 7.907, "freshOIDCLogin": true, "configurationPreserved": true, "preOutageKubeconfig": {"cluster-a": 200, "cluster-b": 200}}
+Scaling Rancher to zero; Kubernetes APIs stay up
+Waiting for readiness: 0 seconds; status 1
+rancherOutage {"dashboardStatus": 502, "proxyResults": {"cluster-a": "service-unavailable", "cluster-b": "service-unavailable"}, "native": [{"cluster": "mngmt", "nativeAdministrator": true}, {"cluster": "cluster-a", "nativeAdministrator": true, "nativeServiceAccount": true}, {"cluster": "cluster-b", "nativeAdministrator": true, "nativeServiceAccount": true}], "keycloakDiscoveryStatus": 200}
+Restoring Rancher replica
+Waiting for readiness: 3 seconds; status 502
+rancherRecovered {"recoverySeconds": 22.745, "freshOIDCLogin": true, "preOutageKubeconfigWorks": true, "configurationPreserved": true, "clusters": [{"cluster": "cluster-a", "state": "active", "agentAvailable": true}, {"cluster": "cluster-b", "state": "active", "agentAvailable": true}]}
+Restoring services and removing test credentials
+RESTORED: Keycloak running; Rancher original replica count; configuration intact; test credentials revoked

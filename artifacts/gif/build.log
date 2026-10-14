@@ -1,3 +1,12 @@
+ Network kubernetes-sso-gif_default Creating
+ Network kubernetes-sso-gif_default Creating
+ Network kubernetes-sso-gif_default Created
+ Network kubernetes-sso-gif_default Created
+ Container sso-lab-gif Creating
+ Container sso-lab-gif Created
+ Container sso-lab-gif Starting
+ Container sso-lab-gif Started
+debconf: delaying package configuration, since apt-utils is not installed
 Prepared overview
 Prepared identity
 Prepared roles
@@ -10,4 +19,11 @@ Prepared terminal-a
 Prepared terminal-b
 Prepared lifecycle
 Prepared boundaries
-PASS: 56s 1812898 bytes silent looping GIF
+Prepared reliability
+PASS: 59s 1827383 bytes silent looping GIF
+ Container sso-lab-gif Stopping
+ Container sso-lab-gif Stopped
+ Container sso-lab-gif Removing
+ Container sso-lab-gif Removed
+ Network kubernetes-sso-gif_default Removing
+ Network kubernetes-sso-gif_default Removed

@@ -76,14 +76,14 @@ Completed with actual Alice kubeconfigs and an isolated trusted Chromium browser
 
 - [x] Record a narrated walkthrough of Keycloak identity, reusable Rancher roles, direct project bindings, Alice dashboard access, and actual kubectl results. [Video procedure and evidence](docs/08b-narrated-demo.md). Duration: 2 minutes 58 seconds. Roles unchanged; one-hour kubeconfigs refreshed for the demo.
 
-- [x] Publish a silent 56-second capabilities GIF embedded directly in the GitHub README. [Build and verification](docs/09b-readme-gif.md).
+- [x] Publish a silent 59-second capabilities GIF including Step 10 reliability results embedded directly in the GitHub README. [Build and verification](docs/09b-readme-gif.md).
 
 ## 6. Verify credential lifecycle and finish
 
 - [x] Test Rancher token expiry/revocation, Keycloak account disablement, direct Rancher user-role binding removal, login allow-list removal, and logout independently; record enforcement observations and bounds. [Step 9](docs/09-credential-lifecycle.md).
 - [ ] If needed for rollout, test long-duration OIDC refresh/resync and browser single logout; the Step 9 existing-token observation windows were 20 seconds.
-- [ ] Test Rancher/Keycloak restart and outage behavior, preserving direct recovery access.
-- [ ] Verify invalid TLS trust fails and Mac trust stores remain unchanged.
-- [ ] Save sanitized permission results and lab-only cleanup/unregistration steps; exclude tokens, client secrets, keys, and registration credentials.
+- [x] Test Rancher/Keycloak restart and outage behavior, preserving direct recovery access. [Step 10](docs/10-reliability.md).
+- [x] Verify an unrelated CA fails TLS verification and the lab CA is absent from checked Mac keychains; no host trust-store writes performed. [Verification](artifacts/step-10/final-verification.json).
+- [x] Save sanitized permission results and [lab-only cleanup/unregistration instructions](docs/11-lab-cleanup.md); evidence excludes credential values. Retained POC credentials remain in the separate secrets/kubeconfigs paths as requested. Cleanup was not executed.
 
 Managed EKS/GKE rollout, workload identity tests, custom-resource UI, and HA are outside this minimal POC.

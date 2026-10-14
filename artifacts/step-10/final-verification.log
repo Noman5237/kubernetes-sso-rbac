@@ -1,0 +1,2 @@
+PASS: services recovered, native admins intact, demo namespaces empty, test credentials revoked
+PASS: trusted TLS works, wrong CA fails, lab CA absent from checked Mac keychains

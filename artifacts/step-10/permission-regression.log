@@ -1,0 +1,10 @@
+PASS: no Keycloak groups, user memberships, or group claim mappers
+PASS: user-only admission, reusable roles, exactly one direct Alice binding per demo project; legacy roles/bindings gone
+PASS: Alice global role is user-base only
+PASS: cluster-a direct user binding, demo-only project, no promoted role binding
+PASS: cluster-b direct user binding, demo-only project, no promoted role binding
+PASS: actual Alice OIDC+PKCE login; management cluster not visible
+PASS: cluster-a permission matrix and real allowed/forbidden reads
+PASS: cluster-b permission matrix and real allowed/forbidden reads
+PASS: no-role authenticates at Keycloak but Rancher denies site access
+PASS: local Rancher administrator recovery login preserved

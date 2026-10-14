@@ -1,0 +1,137 @@
+{
+  "startedAt": "2026-10-14T09:21:18.896506+00:00",
+  "observations": [
+    {
+      "test": "baseline",
+      "dashboardStatus": 200,
+      "native": [
+        {
+          "cluster": "mngmt",
+          "nativeAdministrator": true
+        },
+        {
+          "cluster": "cluster-a",
+          "nativeAdministrator": true
+        },
+        {
+          "cluster": "cluster-b",
+          "nativeAdministrator": true
+        }
+      ]
+    },
+    {
+      "test": "keycloakOutage",
+      "discoveryStatus": "network-unavailable",
+      "newLogin": {
+        "allowed": false,
+        "reason": "network-unavailable"
+      },
+      "dashboardStatus": 200,
+      "localRancherAdminLogin": true,
+      "existingCredentials": [
+        {
+          "elapsedSeconds": 0.0,
+          "rancherSession": 200,
+          "clusterA": 200,
+          "clusterB": 200
+        },
+        {
+          "elapsedSeconds": 5.294,
+          "rancherSession": 200,
+          "clusterA": 200,
+          "clusterB": 200
+        },
+        {
+          "elapsedSeconds": 10.409,
+          "rancherSession": 200,
+          "clusterA": 200,
+          "clusterB": 200
+        },
+        {
+          "elapsedSeconds": 15.55,
+          "rancherSession": 200,
+          "clusterA": 200,
+          "clusterB": 200
+        },
+        {
+          "elapsedSeconds": 20.65,
+          "rancherSession": 200,
+          "clusterA": 200,
+          "clusterB": 200
+        }
+      ]
+    },
+    {
+      "test": "keycloakRecovered",
+      "recoverySeconds": 7.907,
+      "freshOIDCLogin": true,
+      "configurationPreserved": true,
+      "preOutageKubeconfig": {
+        "cluster-a": 200,
+        "cluster-b": 200
+      }
+    },
+    {
+      "test": "rancherOutage",
+      "dashboardStatus": 502,
+      "proxyResults": {
+        "cluster-a": "service-unavailable",
+        "cluster-b": "service-unavailable"
+      },
+      "native": [
+        {
+          "cluster": "mngmt",
+          "nativeAdministrator": true
+        },
+        {
+          "cluster": "cluster-a",
+          "nativeAdministrator": true,
+          "nativeServiceAccount": true
+        },
+        {
+          "cluster": "cluster-b",
+          "nativeAdministrator": true,
+          "nativeServiceAccount": true
+        }
+      ],
+      "keycloakDiscoveryStatus": 200
+    },
+    {
+      "test": "rancherRecovered",
+      "recoverySeconds": 22.745,
+      "freshOIDCLogin": true,
+      "preOutageKubeconfigWorks": true,
+      "configurationPreserved": true,
+      "clusters": [
+        {
+          "cluster": "cluster-a",
+          "state": "active",
+          "agentAvailable": true
+        },
+        {
+          "cluster": "cluster-b",
+          "state": "active",
+          "agentAvailable": true
+        }
+      ]
+    }
+  ],
+  "testSessionIds": [
+    "token-88g6k",
+    "token-jb8nt",
+    "token-ts4x9"
+  ],
+  "testKubeconfigs": [
+    {
+      "name": "kubeconfig-dnpxl",
+      "tokens": [
+        "token-ppg97"
+      ],
+      "ttlSeconds": 1800
+    }
+  ],
+  "testsCompleted": true,
+  "restored": true,
+  "testCredentialsRevoked": true,
+  "finishedAt": "2026-10-14T09:22:59.801854+00:00"
+}
